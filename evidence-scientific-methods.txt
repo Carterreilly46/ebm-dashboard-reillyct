@@ -1,0 +1,180 @@
+# Scientific Evidence: Methods & Acquisition Strategy
+# Document your systematic approach to finding research evidence
+
+## 🔍 Research Questions Framework
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+### 📌 Core Research Question
+▼ Primary Investigation Focus
+  "What evidence-based communication strategies enhance inter-organizational collaboration and operational efficiency during business-to-business merger integrations?"
+  └── Key Components:
+      • Evidence-based strategies
+      • Inter-organizational collaboration
+      • Operational efficiency
+      • B2B merger context
+
+### 📋 Supporting Research Questions
+▼ Question 1: Critical Success Factors
+  "What are the critical factors affecting communication effectiveness during B2B merger integrations?"
+  └── Focus Areas:
+      • Communication channels
+      • Message clarity
+      • Stakeholder engagement
+      • Timeline management
+
+▼ Question 2: Protocol Effectiveness
+  "Which structured communication protocols demonstrate the highest success rates in post-merger organizational integration?"
+  └── Measurement Criteria:
+      • Success metrics
+      • Implementation methods
+      • Adoption rates
+      • ROI indicators
+
+▼ Question 3: M&A Success Correlation
+  "What is the relationship between communication approaches and M&A success?"
+  └── Analysis Points:
+      • Integration success rates
+      • Employee retention
+      • Cultural alignment
+      • Operational continuity
+
+▼ Question 4: Cross-Cultural Considerations
+  "What are the best practices in cross-cultural and cross-border M&A communication?"
+  └── Key Aspects:
+      • Cultural sensitivity
+      • Language barriers
+      • Regional differences
+      • International protocols
+
+### 🎯 Keywords and Terminology
+▼ Primary Search Terms
+  • Integration → [Process of combining organizations]
+  • Communication → [Information exchange methods]
+  • Dissemination → [Information distribution strategies]
+  • M&A Success → [Merger achievement metrics]
+  • Change Management → [Transition handling procedures]
+
+▼ Secondary Concepts
+  • Social Exchange Theory → [Framework for organizational relationships]
+  • Organizational Commitment → [Employee loyalty and engagement]
+  • Post-merger Integration → [After-merger combination process]
+  • Cultural Alignment → [Values and practices harmonization]
+  • Operational Efficiency → [Process optimization methods]
+
+## Search Strategy
+
+### Databases Searched
+- [ ] **PubMed/MEDLINE** [For health/organizational behavior research]
+- [ ] **Business Source Premier** [For business and management research] 
+- [ ] **Google Scholar** [For multidisciplinary academic content]
+- [ ] **JSTOR** [For established academic journals]
+- [ ] **SSRN** [For business and social science working papers]
+- [ ] **Other:** [List additional relevant databases]
+
+### Keywords and Search Terms
+
+#### Primary Keywords
+integration, communication, disseminication, rumor, uncertainty, program]
+
+#### Secondary Keywords  
+social exchange theory, organizational commitment, post merger integration, clash, change, efficiency]
+
+#### Boolean Search Combinations
+[Document your search string combinations]
+- Example: ("employee retention" OR "staff turnover") AND ("small business" OR SME)
+
+### Search Filters Applied
+- **Date Range:** [Years included in search]
+- **Language:** [Languages included]
+- **Study Types:** [Research designs included/excluded]
+- **Geographic Scope:** [Regions/countries of interest]
+- **Industry Focus:** [Relevant sectors]
+
+## Selection Criteria
+
+### Inclusion Criteria
+[What studies WILL you include?]
+- Study design requirements
+- Population/context requirements
+- Outcome measures
+- Quality thresholds
+
+### Exclusion Criteria  
+[What studies will you EXCLUDE?]
+- Study limitations
+- Context mismatches
+- Quality concerns
+- Accessibility issues
+
+## Search Results Summary
+
+### Initial Search Results
+- **Total Articles Found:** [Number across all databases]
+- **After Removing Duplicates:** [Number of unique articles]
+- **After Title/Abstract Screening:** [Number meeting basic criteria]
+- **Selected for Full Review:** [Final number for detailed analysis]
+
+### Search Documentation
+[Keep a record of what you searched and when]
+
+**Date:** [Search date]
+**Database:** [Which database]
+**Search Terms:** [Exact search string used]
+**Results:** [Number of results]
+**Notes:** [Any observations about the search]
+
+## Quality Assessment Approach
+[How will you evaluate study quality?]
+
+### Research Design Hierarchy
+1. **Systematic Reviews/Meta-analyses** [Highest quality]
+2. **Randomized Controlled Trials** [High quality]
+3. **Quasi-experimental Studies** [Medium-high quality]
+4. **Cohort Studies** [Medium quality]
+5. **Cross-sectional Studies** [Medium-low quality]
+6. **Case Studies** [Lower quality but valuable for context]
+
+### Quality Criteria Checklist
+- [ ] Clear research question
+- [ ] Appropriate methodology
+- [ ] Adequate sample size
+- [ ] Valid measurement tools
+- [ ] Appropriate statistical analysis
+- [ ] Clear reporting of results
+- [ ] Discussion of limitations
+- [ ] Peer-reviewed publication
+
+## Documentation Process
+[How you'll organize and track your findings]
+
+### Reference Management
+[How you'll keep track of citations]
+
+### Evidence Extraction Form
+[What information you'll record for each study]
+- Citation details
+- Study design and methodology
+- Sample characteristics
+- Key findings
+- Relevance to your problem/solution
+- Quality assessment
+
+## Challenges and Limitations
+[Document any issues with your search process]
+
+### Search Limitations
+[What couldn't you access or find?]
+
+### Resource Constraints
+[Time, database access, or other limitations]
+
+### Topic-Specific Challenges
+[Issues unique to your research area]
+
+---
+INSTRUCTIONS:
+1. Be systematic and comprehensive in your approach
+2. Document everything so others could replicate your search
+3. Focus on research relevant to both your problem AND potential solutions
+4. Use library resources and ask librarians for help with database searches
+5. Keep detailed records of what you find and why you include/exclude studies
