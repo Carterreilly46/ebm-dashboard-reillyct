@@ -8,15 +8,8 @@
         /* === CSS CUSTOM PROPERTIES === */
         :root {
             --primary-gradient: linear-gradient(135deg, #450084 0%, #8D4B98 100%);
-            -            <div class="progress-step pending" onclick="showTab(1)">🎯 Framework</div>
-            <div class="progress-step pending" onclick="showTab(2)">🔍 Evidence</div>
-            <div class="progress-step pending" onclick="showTab(3)">⚖️ Synthesis</div>
-            <div class="progress-step pending" onclick="showTab(4)">✨ Apply</div>
-            <div class="progress-step pending" onclick="showTab(5)">📊 Assess</div>a                <button class="tab-button active" onclick="showTab(1)">⭕ Problem & Solution Framework</button>
-                <button class="tab-button" onclick="showTab(2)">� Evidence Hub</button>
-                <button class="tab-button" onclick="showTab(3)">🔄 Aggregation</button>
-                <button class="tab-button" onclick="showTab(4)">⚡ Application</button>
-                <button class="tab-button" onclick="showTab(5)">� Assessment</button>: #CBB677;
+            --jmu-purple: #450084;
+            --jmu-gold: #CBB677;
             --tab-inactive: #95a5a6;
             --step-green: #450084;
             --step-blue: #CBB677;
@@ -48,28 +41,8 @@
             overflow-wrap: break-word;
         }
 
-        .tab-panel {
-            display: none;
-            padding: 40px;
-            animation: fadeIn 0.3s ease-in;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-width: 100%;
-        }
-
-        .content-file-preview {
-            overflow-x: auto;
-            max-width: 100%;
-            word-wrap: break-word;
-        }
-
         .header {
-            background: linear-gradient(135deg, #450084, #8D4B98);
+            background: var(--primary-gradient);
             color: white;
             padding: 30px;
             text-align: center;
@@ -78,406 +51,400 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .header p {
+        .header .subtitle {
             font-size: 1.2em;
             opacity: 0.9;
-        }
-
-        .student-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            margin-top: 20px;
-            border-radius: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            font-size: 0.9em;
-        }
-
-        /* === SIMPLE TAB SYSTEM === */
-        .tab-nav {
-            display: flex;
-            background: #ecf0f1;
-            border-bottom: 3px solid #bdc3c7;
-        }
-
-            .tab-button {
-            flex: 1;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            background: var(--tab-inactive);
-            color: white;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all var(--transition-speed);
-            border: none;
-            border-right: 2px solid white;
-            clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
-            margin: 0 5px;
-        }        .tab-button:last-child {
-            border-right: none;
-        }
-
-        .tab-button:hover {
-            background: #7f8c8d;
-            transform: translateY(-2px);
-        }
-
-        .tab-button.active {
-            background: var(--tab-active);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-        }
-
-        .tab-content {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .tab-panel {
-            display: none;
-            padding: 40px;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        /* === FLOWCHART STYLING === */
-        .flowchart-step {
-            background: var(--step-green);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 25px;
-            margin: 15px 0;
-            font-weight: bold;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
-        }
-
-        .decision-diamond {
-            background: var(--step-blue);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            margin: 15px 0;
-            text-align: center;
-            position: relative;
-            transform: rotate(45deg);
-        }
-
-        .decision-diamond .text {
-            transform: rotate(-45deg);
-            font-weight: bold;
-        }
-
-        .content-file-preview {
-            background: #f8f9fa;
-            border: 2px dashed #bdc3c7;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .content-file-preview:hover {
-            border-color: #3498db;
-            background: #f0f8ff;
-        }
-
-        .content-file-preview h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .edit-notice {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-size: 0.8em;
-        }
-
-        .evidence-type {
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px;
-            border-radius: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .scientific { background: #e74c3c; }
-        .practitioner { background: #f39c12; }
-        .organizational { background: #27ae60; }
-        .stakeholder { background: #9b59b6; }
-
-        .evidence-section {
-            margin: 40px 0;
-            padding: 25px;
-            border-left: 5px solid #ddd;
-            background: #fafafa;
-            border-radius: 10px;
-        }
-
-        .evidence-section h3 {
-            margin-top: 0;
             margin-bottom: 20px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            display: inline-block;
         }
 
-        .evidence-section .content-file-preview {
-            margin: 15px 0;
-        }
-
-        .progress-indicator {
+        .progress-bar {
             display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            margin: 0;
-            border-bottom: 3px solid #dee2e6;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            justify-content: space-around;
+            margin: 20px 0;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .progress-step {
-            flex: 1;
-            text-align: center;
-            padding: 12px 8px;
-            margin: 0 5px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 0.9em;
-            transition: all var(--transition-speed);
-            position: relative;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 25px;
             cursor: pointer;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            text-align: center;
+            min-width: 150px;
         }
 
-        .progress-step.completed {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
-            color: white;
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        .progress-step:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
         }
 
         .progress-step.active {
-            background: linear-gradient(135deg, #3498db, #74b9ff);
-            color: white;
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .progress-step.pending {
-            background: #bdc3c7;
-            color: white;
-        }
-
-        .progress-step::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            width: 0;
-            height: 0;
-            border-left: 10px solid;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            transform: translateY(-50%);
-            z-index: 1;
-        }
-
-        .progress-step.completed::after {
-            border-left-color: #27ae60;
-        }
-
-        .progress-step.active::after {
-            border-left-color: #3498db;
-        }
-
-        .progress-step.pending::after {
-            border-left-color: #bdc3c7;
-        }
-
-        .progress-step:last-child::after {
-            display: none;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
+            background: var(--jmu-gold);
+            color: var(--jmu-purple);
+            border-color: white;
             font-weight: bold;
-            margin: 10px 5px;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            overflow-x: auto;
+            border-bottom: 3px solid var(--jmu-purple);
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 20px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--tab-inactive);
             transition: all var(--transition-speed);
+            border-bottom: 3px solid transparent;
+            clip-path: polygon(10% 0%, 90% 0%, 80% 100%, 20% 100%);
+            margin: 0 5px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        .tab-button:hover {
+            background: linear-gradient(135deg, var(--jmu-purple), #6a4c93);
+            color: white;
         }
 
-        .milestone-tracker {
-            background: #e8f4fd;
-            border-left: 4px solid #3498db;
+        .tab-button.active {
+            background: var(--primary-gradient);
+            color: white;
+            border-bottom-color: var(--jmu-gold);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 40px;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .content-preview {
+            background: #f8f9fa;
+            border-left: 5px solid var(--jmu-purple);
             padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
+            border-radius: 0 10px 10px 0;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
-        .milestone-tracker h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+        .content-preview h3 {
+            color: var(--jmu-purple);
+            margin-bottom: 15px;
+            font-size: 1.4em;
         }
 
-        .checklist {
-            list-style: none;
-            padding: 0;
+        .content-preview pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: inherit;
+            margin: 0;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            max-width: 100%;
+            overflow-x: auto;
         }
 
-        .checklist li {
-            padding: 5px 0;
-            color: #555;
+        .footer {
+            background: var(--jmu-purple);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
         }
 
-        .checklist li:before {
-            content: "☐ ";
-            color: #3498db;
-            font-weight: bold;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab-button {
+                clip-path: none;
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .progress-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .progress-step {
+                width: 90%;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Header Section -->
         <div class="header">
-            <h1>🎯 My Evidence-Based Management Dashboard</h1>
-            <p>MGT357 - Fall 2025 | Portfolio Project</p>
+            <h1>📊 My EBM Dashboard</h1>
+            <div class="subtitle">MGT357 Evidence-Based Management | Fall 2025</div>
+            <div class="subtitle">Carter Reilly | <span id="current-date"></span></div>
             
-            <div class="student-info">
-                <div><strong>Student:</strong> [Carter Reilly]</div>
-                <div><strong>Problem Focus:</strong> [aquisition communications]</div>
-                <div><strong>Repository:</strong> <a href="#" style="color: #74b9ff;">[Your GitHub Link]</a></div>
-                <div><strong>Last Updated:</strong> <span id="currentDate"></span></div>
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step active" onclick="showTab(1)">🎯 Framework</div>
+                <div class="progress-step pending" onclick="showTab(2)">🔍 Evidence</div>
+                <div class="progress-step pending" onclick="showTab(3)">⚖️ Synthesis</div>
+                <div class="progress-step pending" onclick="showTab(4)">✨ Apply</div>
+                <div class="progress-step pending" onclick="showTab(5)">📊 Assess</div>
             </div>
         </div>
 
-        <!-- Persistent Progress Indicator -->
-        <div class="progress-indicator">
-            <div class="progress-step pending" onclick="showTab(1)">⭕ Framework</div>
-            <div class="progress-step pending" onclick="showTab(2)">� Evidence</div>
-            <div class="progress-step pending" onclick="showTab(3)">🔄 Synthesis</div>
-            <div class="progress-step pending" onclick="showTab(4)">⚡ Application</div>
-            <div class="progress-step pending" onclick="showTab(5)">� Assessment</div>
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab(1)">🎯 Problem & Solution Framework</button>
+            <button class="tab-button" onclick="showTab(2)">🔍 Evidence Hub</button>
+            <button class="tab-button" onclick="showTab(3)">🔄 Aggregation</button>
+            <button class="tab-button" onclick="showTab(4)">⚡ Application</button>
+            <button class="tab-button" onclick="showTab(5)">📊 Assessment</button>
         </div>
 
-        <div class="tab-container">
-            <!-- Tab Navigation -->
-            <div class="tab-nav">
-                <button class="tab-button active" onclick="showTab(1)">⭕ Problem & Solution Framework</button>
-                <button class="tab-button" onclick="showTab(2)">� Evidence Hub</button>
-                <button class="tab-button" onclick="showTab(3)">🔄 Aggregation</button>
-                <button class="tab-button" onclick="showTab(4)">⚡ Application</button>
-                <button class="tab-button" onclick="showTab(5)">� Assessment</button>
+        <!-- Tab Content -->
+        <div class="tab-content active" id="tab1">
+            <h2>🎯 Problem & Solution Framework</h2>
+            <p>Define your management problem and explore solution constraints.</p>
+
+            <!-- Problem Definition -->
+            <div class="content-preview">
+                <h3>📋 Problem Definition</h3>
+                <pre id="ask-problem-definition-content"></pre>
             </div>
 
-            <!-- Tab Content -->
-            <div class="tab-content">
-                <!-- TAB 1: Problem & Solution Framework -->
-                <div class="tab-panel active" id="tab-1">
-                    <h2>🎯 Problem & Solution Framework</h2>
-                    <p><strong>Following Module 2 Flowchart:</strong> Define the problem AND identify the preferred solution before collecting evidence.</p>
-                    
-                    <div class="metrics-container">
-                        <div class="metric-card">
-                            <div class="metric-circle">50%</div>
-                            <h3 class="metric-title">Delay Reduction</h3>
-                            <p class="metric-desc">Target improvement in project timelines</p>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-circle">80%</div>
-                            <h3 class="metric-title">Satisfaction</h3>
-                            <p class="metric-desc">Stakeholder satisfaction goal</p>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-circle">4h</div>
-                            <h3 class="metric-title">Response Time</h3>
-                            <p class="metric-desc">Maximum communication delay</p>
-                        </div>
-                        <div class="metric-card">
-                            <div class="metric-circle">30%</div>
-                            <h3 class="metric-title">Collaboration</h3>
-                            <p class="metric-desc">Increase in joint initiatives</p>
-                        </div>
-                    </div>
-                    
-                    <div class="milestone-tracker">
-                        <h4>📋 Milestone 1 Checklist (Due: Week 3)</h4>
-                        <ul class="checklist">
-                            <li>GitHub repository created and dashboard running</li>
-                            <li>Problem Definition completed using frameworks</li>
-                            <li>Stakeholder Analysis documented</li>
-                            <li>Success Criteria clearly defined</li>
-                            <li>Progress tracker updated</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="flowchart-step">
-                        STEP 1: ASK - What is the assumed problem?
-                    </div>
-                    
-                    <div class="content-file-preview" onclick="openContentFile('ask-problem-definition.txt')">
-                        <h4>📝 content/ask-problem-definition.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre id="problem-definition-content">[This content will load from your .txt file]
+            <!-- Stakeholder Analysis -->
+            <div class="content-preview">
+                <h3>👥 Stakeholder Analysis</h3>
+                <pre id="ask-stakeholder-analysis-content"></pre>
+            </div>
 
-Use the X → Y Framework and PICOC Framework to define your management problem clearly.
-See the template file for detailed prompts and structure.</pre>
-                    </div>
+            <!-- Success Criteria -->
+            <div class="content-preview">
+                <h3>✅ Success Criteria Definition</h3>
+                <pre id="ask-success-criteria-content"></pre>
+            </div>
 
-                    <div class="content-file-preview" onclick="openContentFile('ask-stakeholder-analysis.txt')">
-                        <h4>📝 content/ask-stakeholder-analysis.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre id="stakeholder-analysis-content">[This content will load from your .txt file]
+            <!-- Solution Constraints -->
+            <div class="content-preview">
+                <h3>🚧 Solution Constraints</h3>
+                <pre id="ask-solution-constraints-content"></pre>
+            </div>
+        </div>
 
-Identify all stakeholders affected by your problem and potential solution.
-Consider internal and external stakeholders, their interests, and influence levels.</pre>
-                    </div>
+        <div class="tab-content" id="tab2">
+            <h2>🔍 Evidence Hub</h2>
+            <p>Collect and evaluate evidence from multiple sources.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Evidence collection tools and source management will be available here.</p>
+            </div>
+        </div>
 
-                    <div class="content-file-preview" onclick="openContentFile('ask-success-criteria.txt')">
-                        <h4>📝 content/ask-success-criteria.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre id="success-criteria-content">[This content will load from your .txt file]
+        <div class="tab-content" id="tab3">
+            <h2>🔄 Evidence Aggregation</h2>
+            <p>Synthesize and integrate your collected evidence.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Evidence synthesis and integration tools will be available here.</p>
+            </div>
+        </div>
 
-Define specific, measurable criteria for success.
-How will you know if your evidence-based solution worked?</pre>
-                    </div>
+        <div class="tab-content" id="tab4">
+            <h2>⚡ Solution Application</h2>
+            <p>Implement your evidence-based solution.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Implementation planning and execution tools will be available here.</p>
+            </div>
+        </div>
 
-                    <div class="content-file-preview" onclick="openContentFile('ask-solution-constraints.txt')">
-                        <h4>📝 content/ask-solution-constraints.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre id="ask-solution-constraints-content"># Solution Constraints Analysis
+        <div class="tab-content" id="tab5">
+            <h2>📊 Assessment & Monitoring</h2>
+            <p>Evaluate the effectiveness of your implemented solution.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Assessment and monitoring tools will be available here.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Carter Reilly | James Madison University | MGT357 Evidence-Based Management</p>
+        </div>
+    </div>
+
+    <script>
+        // Update date automatically
+        function updateDate() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Content data embedded directly
+        const contentData = {
+            'ask-problem-definition': `# 📊 Problem Definition Framework
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🔄 X → Y Framework
+### Current State (X - What's happening now that's problematic?)
+There is a significant breakdown in business-to-business communication channels, leading to inefficient information flow, delayed decision-making, and reduced collaboration between partner organizations. This is particularly evident during merger situations and cross-departmental projects.
+
+### Desired State (Y - What outcome do we want to achieve?)
+We aim to establish seamless, reliable communication channels between business partners, with clear protocols for information sharing, regular interaction opportunities, and structured feedback mechanisms that enhance collaborative efficiency and business relationships.
+
+## 🎯 PICOC Framework
+### Population (P - Who is affected by this problem?)
+👥 Primary Stakeholders:
+  ◆ Business partners and their key stakeholders
+  ◆ Internal teams managing external relationships
+  ◆ Operational staff involved in cross-company projects
+  ◆ Management teams from both organizations
+  ◆ Client-facing employees managing business relationships
+
+### Intervention (I - What solution/action are we considering?)
+🔧 Proposed Solutions:
+  ◈ Implementation of a dedicated communication hotline for urgent inter-business matters
+  ◈ Regular structured external networking events and team-building activities
+  ◈ Temporary inter-office exchange programs during merger periods
+  ◈ Digital collaboration platform implementation
+  ◈ Standardized communication protocols and templates
+
+### Comparison (C - What alternatives exist?)
+- Maintain current ad-hoc communication practices
+- Rely solely on email and traditional communication channels
+- Outsource communication coordination to third-party firms
+- Implement virtual-only communication solutions
+- Create separate dedicated liaison teams
+
+### Outcomes (O - What will success look like?)
+📊 Progress Towards Goals:
+[▓▓▓▓▓▓░░░░] 50% reduction in delays
+[▓▓▓▓▓▓▓░░░] 80% stakeholder satisfaction
+[▓▓▓▓░░░░░░] 4-hour response time target
+[▓▓▓░░░░░░░] 30% collaboration increase
+[▓▓▓▓▓░░░░░] Merger integration success
+
+### Context (C - Where/when does this apply?)
+- During active merger and acquisition processes
+- Across all geographical locations where business partnerships exist
+- Within cross-departmental projects involving multiple organizations
+- Particularly crucial during major organizational changes
+- Applicable to both formal and informal business relationships`,
+
+            'ask-stakeholder-analysis': `# Stakeholder Analysis
+# Identify and analyze all parties affected by your problem and solution
+
+## Internal Stakeholders
+
+### Senior Management
+- **Interest in Problem:** Direct impact on strategic initiatives, merger success rates, and organizational growth
+- **Interest in Solution:** Improved decision-making speed, better partner relationships, increased operational efficiency
+- **Influence Level:** High - Critical for resource allocation and cultural change
+- **Support Level:** Likely supporter, but concerned about implementation costs
+
+### Middle Management
+- **Interest in Problem:** Daily challenges in cross-team coordination and project delivery
+- **Interest in Solution:** Better team productivity, clearer communication channels, improved project outcomes
+- **Influence Level:** High - Key to successful implementation and team adoption
+- **Support Level:** Strong supporter, but may resist additional administrative burden
+
+### Employees/Staff
+- **Interest in Problem:** Frustration with unclear communication paths, delayed responses, work inefficiencies
+- **Interest in Solution:** Clearer protocols, faster response times, reduced work stress
+- **Influence Level:** Medium - Daily users of new communication systems
+- **Support Level:** Mixed - Supporters if solution simplifies work, resistant if adds complexity
+
+## External Stakeholders
+
+### Customers/Clients
+- **Interest in Problem:** Service delays and inconsistent communication affect customer experience
+- **Interest in Solution:** More reliable service delivery and faster response to inquiries
+- **Influence Level:** High - Their satisfaction directly impacts business success
+- **Support Level:** Strong supporters if solution improves service experience
+
+### Suppliers/Partners
+- **Interest in Problem:** Inefficient collaboration slows down joint projects and creates misunderstandings
+- **Interest in Solution:** Streamlined communication channels and clearer protocols
+- **Influence Level:** High - Critical to successful implementation across organizations
+- **Support Level:** Strong supporters, but may have concerns about adoption costs
+
+## Stakeholder Engagement Strategy
+
+### High Influence, High Interest (Manage Closely)
+- Senior Management: Regular status meetings, direct involvement in key decisions
+- Middle Management: Weekly implementation updates, leadership in pilot programs
+- Key Business Partners: Joint planning sessions, regular feedback cycles
+- Major Clients: Priority communication channels, dedicated feedback mechanisms`,
+
+            'ask-success-criteria': `# Success Criteria Definition
+# Define specific, measurable criteria to evaluate solution effectiveness
+
+## SMART Success Criteria
+
+### Criterion 1: Response Time Improvement
+- **Specific:** Average response time for inter-business communications
+- **Measurable:** Track time between initial message and first response
+- **Achievable:** Reduce average response time from 24 hours to 4 hours
+- **Relevant:** Directly addresses core communication delay issues
+- **Time-bound:** Achieve target within 3 months of implementation
+
+### Criterion 2: Cross-Organization Project Efficiency
+- **Specific:** Time spent in project coordination and communication
+- **Measurable:** 40% reduction in communication-related project delays
+- **Achievable:** Implement standardized protocols and digital platforms
+- **Relevant:** Tackles primary pain point in project delivery
+- **Time-bound:** Achieve improvement within 6 months of launch
+
+### Criterion 3: Stakeholder Satisfaction
+- **Specific:** Partner and internal staff satisfaction with communication
+- **Measurable:** Achieve 85% positive feedback on communication effectiveness
+- **Achievable:** Through systematic implementation of new channels
+- **Relevant:** Indicates successful adoption of new communication practices
+- **Time-bound:** Reach target satisfaction by end of 4 quarters
+
+## Measurement Framework
+
+### Quantitative Metrics
+**Communication Efficiency Metrics:**
+- Response Time: Reduce average response time to < 4 hours
+- Project Delays: 40% reduction in communication-related delays
+- Meeting Time: 30% reduction in time spent in coordination meetings
+- Issue Resolution: 50% reduction in miscommunication incidents
+- Platform Adoption: 95% staff usage of new communication tools
+
+**Business Impact Metrics:**
+- Cost Savings: 25% reduction in communication overhead costs
+- Productivity: 20% increase in cross-team project completion rate
+- Partner Satisfaction: Minimum 8.5/10 satisfaction score
+- Error Reduction: 60% decrease in communication-related errors
+- Staff Efficiency: 30% reduction in time spent on communication tasks`,
+
+            'ask-solution-constraints': `# Solution Constraints Analysis
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## 🚧 Resource Constraints
@@ -523,11 +490,6 @@ How will you know if your evidence-based solution worked?</pre>
 - Backup systems required
 - Business continuity requirements
 
-### Change Management
-- Resistance to new systems
-- Learning curve considerations
-- Adoption rate requirements
-
 ## 📊 Performance Constraints
 ### Technical Requirements
 - Maximum response time: 4 hours
@@ -542,287 +504,48 @@ How will you know if your evidence-based solution worked?</pre>
 ### Scalability Needs
 - Must support growing user base
 - Expandable to new locations
-- Adaptable for future mergers
+- Adaptable for future mergers`
+        };
 
----
-INSTRUCTIONS:
-1. Consider all constraint categories when designing solution
-2. Prioritize constraints based on impact
-3. Document assumptions and dependencies
-4. Update as new constraints are identified
-5. Align with stakeholder expectations</pre>
-                    </div>
-
-                    <div class="flowchart-step">
-                        STEP 2: ASK - What is the evidence for the assumed problem?
-                    </div>
-
-                    <div class="flowchart-step">
-                        STEP 3: ASK - What is the preferred solution?
-                    </div>
-
-                    <div class="flowchart-step">
-                        STEP 4: ASK - What is the evidence for the preferred solution?
-                    </div>
-
-                    <p><strong>Next Phase:</strong> Now that we have our problem framework defined, we move to the Evidence Hub to systematically collect and evaluate evidence from all four sources to answer Steps 2 & 4.</p>
-                </div>
-
-                <!-- TAB 2: Evidence Hub -->
-                <div class="tab-panel" id="tab-2">
-                    <h2>🔍 Evidence Hub</h2>
-                    <p><strong>Purpose:</strong> Systematically collect and critically evaluate evidence from all four sources.</p>
-
-                    <div class="milestone-tracker">
-                        <h4>📋 Milestone 2 & 3 Checkpoints</h4>
-                        <ul class="checklist">
-                            <li><strong>Milestone 2 (Week 6):</strong> Scientific & Practitioner Evidence Complete</li>
-                            <li><strong>Milestone 3 (Week 9):</strong> Organizational & Stakeholder Evidence Complete</li>
-                            <li>All acquisition methods documented</li>
-                            <li>Evidence sources collected and organized</li>
-                            <li>Quality appraisals completed for each evidence type</li>
-                        </ul>
-                    </div>
-
-                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                        <h4>🎯 Evidence Collection Goals:</h4>
-                        <ul>
-                            <li><strong>For Step 2:</strong> What evidence supports our assumed problem?</li>
-                            <li><strong>For Step 4:</strong> What evidence supports our preferred solution?</li>
-                        </ul>
-                    </div>
-
-                    <!-- Scientific Evidence Section -->
-                    <div class="evidence-section">
-                        <h3 class="evidence-type scientific">🔬 Scientific Evidence</h3>
-                        
-                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-methods.txt')">
-                            <h4>📝 content/evidence-scientific-methods.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Document your search strategy, databases used, keywords, and selection criteria]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-sources.txt')">
-                            <h4>📝 content/evidence-scientific-sources.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[List and summarize the research studies, meta-analyses, and systematic reviews you found]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-scientific-appraisal.txt')">
-                            <h4>📝 content/evidence-scientific-appraisal.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Evaluate the quality, reliability, and relevance of your scientific evidence]</pre>
-                        </div>
-                    </div>
-
-                    <!-- Practitioner Evidence Section -->
-                    <div class="evidence-section">
-                        <h3 class="evidence-type practitioner">👔 Practitioner Evidence</h3>
-                        
-                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-methods.txt')">
-                            <h4>📝 content/evidence-practitioner-methods.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Document how you collected practitioner insights, interviews, case studies]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-sources.txt')">
-                            <h4>📝 content/evidence-practitioner-sources.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Summarize expert interviews, case studies, and professional experience]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-practitioner-appraisal.txt')">
-                            <h4>📝 content/evidence-practitioner-appraisal.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Assess the credibility and relevance of practitioner evidence]</pre>
-                        </div>
-                    </div>
-
-                    <!-- Organizational Evidence Section -->
-                    <div class="evidence-section">
-                        <h3 class="evidence-type organizational">🏢 Organizational Evidence</h3>
-                        
-                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-methods.txt')">
-                            <h4>📝 content/evidence-organizational-methods.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Document internal data collection methods and sources]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-sources.txt')">
-                            <h4>📝 content/evidence-organizational-sources.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Present internal data, KPIs, reports, and organizational studies]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-organizational-appraisal.txt')">
-                            <h4>📝 content/evidence-organizational-appraisal.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Evaluate the quality and limitations of organizational data]</pre>
-                        </div>
-                    </div>
-
-                    <!-- Stakeholder Evidence Section -->
-                    <div class="evidence-section">
-                        <h3 class="evidence-type stakeholder">👥 Stakeholder Evidence</h3>
-                        
-                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-methods.txt')">
-                            <h4>📝 content/evidence-stakeholder-methods.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Document stakeholder engagement methods, surveys, interviews]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-sources.txt')">
-                            <h4>📝 content/evidence-stakeholder-sources.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Summarize stakeholder feedback, surveys, and input]</pre>
-                        </div>
-
-                        <div class="content-file-preview" onclick="openContentFile('evidence-stakeholder-appraisal.txt')">
-                            <h4>📝 content/evidence-stakeholder-appraisal.txt</h4>
-                            <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                            <pre>[Assess the representativeness and reliability of stakeholder evidence]</pre>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 3: Aggregation -->
-                <div class="tab-panel" id="tab-3">
-                    <h2>⚖️ Evidence Aggregation</h2>
-                    <p><strong>Synthesis Process:</strong> Weigh and combine evidence from multiple sources to form conclusions.</p>
-
-                    <div class="milestone-tracker">
-                        <h4>📋 Milestone 4 Checkpoint (Week 12)</h4>
-                        <ul class="checklist">
-                            <li>Evidence synthesis across all four types completed</li>
-                            <li>Solution design based on evidence analysis</li>
-                            <li>Implementation plan developed</li>
-                            <li>Risk assessment and mitigation strategies</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-file-preview" onclick="openContentFile('synthesis-integration.txt')">
-                        <h4>📝 content/synthesis-integration.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre id="evidence-synthesis-content">[Synthesize evidence from all four sources to reach evidence-based conclusions]
-
-Document areas of agreement, disagreement, and evidence quality.
-Weight the evidence and form recommendations.</pre>
-                    </div>
-                </div>
-
-                <!-- TAB 4: Application -->
-                <div class="tab-panel" id="tab-4">
-                    <h2>🚀 Application</h2>
-                    <p><strong>Implementation Planning:</strong> Put the evidence-based solution into practice.</p>
-
-                    <div class="content-file-preview" onclick="openContentFile('application-implementation.txt')">
-                        <h4>📝 content/application-implementation.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre>[Create detailed implementation plan with timeline, resources, and stakeholder communication]</pre>
-                    </div>
-                </div>
-
-                <!-- TAB 5: Assessment -->
-                <div class="tab-panel" id="tab-5">
-                    <h2>📊 Assessment</h2>
-                    <p><strong>Continuous Improvement:</strong> Evaluate results and refine the approach.</p>
-
-                    <div class="milestone-tracker">
-                        <h4>📋 Final Submission Checklist (Week 16)</h4>
-                        <ul class="checklist">
-                            <li>Assessment framework completed</li>
-                            <li>Lessons learned documented</li>
-                            <li>Dashboard polished for portfolio</li>
-                            <li>Peer review feedback incorporated</li>
-                            <li>Final reflection on EBM process</li>
-                        </ul>
-                    </div>
-
-                    <div class="content-file-preview" onclick="openContentFile('assessment-monitoring.txt')">
-                        <h4>📝 content/assessment-monitoring.txt</h4>
-                        <div class="edit-notice">🖊️ Click to edit this file in VS Code</div>
-                        <pre>[Evaluate the effectiveness of your EBM process and solution]</pre>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 30px;">
-                        <h3>🎉 EBM Cycle Complete!</h3>
-                        <p>Congratulations! You've built a professional Evidence-Based Management dashboard.</p>
-                        <div>
-                            <button class="btn" onclick="window.open('PROJECT_TRACKER.md')">📊 View Project Tracker</button>
-                            <button class="btn" onclick="showTab(1)">↻ Review Complete Process</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Update date automatically
-        function updateDate() {
-            const now = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', options);
-        }
-        
-        // Update date when page loads
-        document.addEventListener('DOMContentLoaded', updateDate);
-        
-        // Content file loading functionality
-        function loadContentFiles() {
-            // This function would load content from .txt files
-            // For now, it shows placeholder content
-            console.log('Content files would be loaded here');
-        }
-
-        // Function to simulate opening content files in VS Code
-        function openContentFile(filename) {
-            alert(`In VS Code, you would open: content/${filename}\n\nThis is where you'll edit your content. Use GitHub Copilot to help with writing and organization!`);
-        }
-
-        // Tab Navigation Functionality
-        function showTab(tabNumber) {
-            // Hide all tab panels
-            const panels = document.querySelectorAll('.tab-panel');
-            panels.forEach(panel => panel.classList.remove('active'));
-            
-            // Remove active class from all tab buttons
-            const buttons = document.querySelectorAll('.tab-button');
-            buttons.forEach(button => button.classList.remove('active'));
-            
-            // Show the selected tab panel
-            document.getElementById(`tab-${tabNumber}`).classList.add('active');
-            
-            // Add active class to the clicked button
-            buttons[tabNumber - 1].classList.add('active');
-            
-            // Update progress indicator
-            updateProgressIndicator(tabNumber);
-        }
-        
-        // Update Progress Indicator based on current tab
-        function updateProgressIndicator(currentTab) {
-            const progressSteps = document.querySelectorAll('.progress-step');
-            
-            progressSteps.forEach((step, index) => {
-                step.classList.remove('completed', 'active', 'pending');
-                
-                if (index + 1 < currentTab) {
-                    step.classList.add('completed');
-                } else if (index + 1 === currentTab) {
-                    step.classList.add('active');
-                } else {
-                    step.classList.add('pending');
+        // Load content function
+        function loadContent() {
+            Object.keys(contentData).forEach(key => {
+                const element = document.getElementById(key + '-content');
+                if(element) {
+                    element.textContent = contentData[key];
                 }
             });
         }
 
-        // Initialize dashboard
-        document.addEventListener('DOMContentLoaded', function() {
-            loadContentFiles();
-            updateProgressIndicator(1);
+        // Tab functionality
+        function showTab(tabNumber) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Remove active class from all progress steps
+            const progressSteps = document.querySelectorAll('.progress-step');
+            progressSteps.forEach(step => step.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById('tab' + tabNumber).classList.add('active');
+            
+            // Add active class to selected tab button
+            tabButtons[tabNumber - 1].classList.add('active');
+            
+            // Add active class to selected progress step
+            progressSteps[tabNumber - 1].classList.add('active');
+        }
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            updateDate();
+            loadContent();
         });
     </script>
-<script src="content-loader.js"></script>
 </body>
 </html>
