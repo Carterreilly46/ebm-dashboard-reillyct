@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Communication & Productivity | MGT357 - Fall 2025</title>
+    <style>
+        /* === CSS CUSTOM PROPERTIES === */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #450084 0%, #8D4B98 50%, #CBB677 100%);
+            --jmu-purple: #450084;
+            --jmu-gold: #CBB677;
+            --tab-inactive: #95a5a6;
+            --step-green: #450084;
+            --step-blue: #CBB677;
+            --border-radius: 15px;
+            --transition-speed: 0.3s;
+            --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-medium: 0 10px 30px rgba(69, 0, 132, 0.15);
+            --shadow-strong: 0 20px 60px rgba(69, 0, 132, 0.25);
+            --glow-purple: 0 0 20px rgba(141, 75, 152, 0.4);
+            --glow-gold: 0 0 20px rgba(203, 182, 119, 0.4);
+        }
+        
+        /* === KEYFRAME ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-strong);
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .header {
+            background: var(--primary-gradient);
+            background-size: 200% 200%;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .progress-bar {
+            display: none; /* Hide the old progress bar */
+        }
+
+        .tabs {
+            display: flex;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 200% 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 18px 15px;
+            gap: 10px;
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+            position: relative;
+            justify-content: center;
+            flex-wrap: nowrap;
+            animation: subtleGradientShift 8s ease infinite;
+        }
+        
+        @keyframes subtleGradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .tabs::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: breathe 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes breathe {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        .tabs::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .tabs::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+        }
+        
+        .tabs::-webkit-scrollbar-thumb {
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            border-radius: 3px;
+        }
+
+        .tab-button {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);
+            border: none;
+            padding: 16px 28px;
+            cursor: pointer;
+            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            color: #667eea;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+            position: relative;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            border: 3px solid transparent;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            flex-shrink: 0;
+            min-width: fit-content;
+        }
+        
+        .tab-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            border-radius: 12px;
+        }
+        
+        .tab-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .tab-button:hover {
+            transform: translateY(-5px) scale(1.05) rotateX(5deg);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+            border-color: #f093fb;
+            color: white;
+        }
+        
+        .tab-button:hover::before {
+            opacity: 1;
+        }
+        
+        .tab-button:hover::after {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+            transition: width 0.8s ease, height 0.8s ease, opacity 0.8s ease;
+        }
+
+        .tab-button.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 200% 100%;
+            color: white;
+            box-shadow: 0 10px 35px rgba(102, 126, 234, 0.6), 
+                        0 0 50px rgba(240, 147, 251, 0.4),
+                        inset 0 2px 10px rgba(255,255,255,0.3);
+            transform: translateY(-3px) scale(1.08);
+            border-color: white;
+            border-width: 3px;
+            animation: activeTabGlow 2s ease-in-out infinite, gradientShiftTab 3s ease infinite;
+            font-weight: 700;
+        }
+        
+        .tab-button.active::before {
+            opacity: 0;
+        }
+        
+        @keyframes activeTabGlow {
+            0%, 100% {
+                box-shadow: 0 10px 35px rgba(102, 126, 234, 0.6), 
+                            0 0 50px rgba(240, 147, 251, 0.4),
+                            inset 0 2px 10px rgba(255,255,255,0.3);
+            }
+            50% {
+                box-shadow: 0 12px 45px rgba(102, 126, 234, 0.8), 
+                            0 0 70px rgba(240, 147, 251, 0.6),
+                            inset 0 2px 15px rgba(255,255,255,0.5);
+            }
+        }
+        
+        @keyframes gradientShiftTab {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* 3D Tilt effect on hover */
+        .tab-button {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .tab-content {
+            display: none;
+            opacity: 0;
+            padding: 40px;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            animation: fadeInContent 0.4s ease-out;
+        }
+        
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-preview {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-left: 6px solid var(--jmu-purple);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 15px 15px 0;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            box-shadow: var(--shadow-medium);
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-strong);
+            border-left-width: 8px;
+        }
+
+        .content-preview h3 {
+            color: var(--jmu-purple);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+            transition: all var(--transition-speed);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .content-preview h3:hover {
+            color: #6a4c93;
+            transform: translateX(3px);
+        }
+
+        .content-preview h3::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, var(--jmu-purple), #8D4B98);
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .content-preview h3.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .content-preview .collapsible-content {
+            max-height: none;
+            overflow: visible;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        .content-preview .collapsible-content.collapsed {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .content-preview pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: inherit;
+            margin: 0;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            max-width: 100%;
+            max-height: 600px;
+            overflow-y: auto;
+            overflow-x: auto;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        /* Custom scrollbar styling */
+        .content-preview pre::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        
+        .content-preview pre::-webkit-scrollbar-track {
+            background: linear-gradient(135deg, #f1f1f1, #e9ecef);
+            border-radius: 10px;
+        }
+        
+        .content-preview pre::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--jmu-purple), #8D4B98);
+            border-radius: 10px;
+            border: 2px solid #f1f1f1;
+        }
+        
+        .content-preview pre::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #6a4c93, var(--jmu-gold));
+            box-shadow: var(--glow-purple);
+        }
+
+        /* Enhanced content formatting styles */
+        .content-preview pre .info-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview pre .info-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .content-preview pre .success-box {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            color: #2c3e50;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 6px 20px rgba(132, 250, 176, 0.3);
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview pre .success-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(132, 250, 176, 0.4);
+        }
+
+        .content-preview pre .warning-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            color: #2c3e50;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 6px 20px rgba(255, 234, 167, 0.3);
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview pre .warning-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 234, 167, 0.4);
+        }
+
+        .content-preview pre .highlight-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--jmu-purple);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .content-preview pre .stat-card {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 3px solid var(--jmu-purple);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin: 10px 10px 10px 0;
+            text-align: center;
+            min-width: 160px;
+            box-shadow: 0 4px 15px rgba(69, 0, 132, 0.2);
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview pre .stat-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(69, 0, 132, 0.3);
+            border-width: 4px;
+        }
+
+        .content-preview pre .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--jmu-purple), #8D4B98);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .content-preview pre .stat-label {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .content-preview pre table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .content-preview pre table th {
+            background: linear-gradient(135deg, var(--jmu-purple) 0%, #6a4c93 100%);
+            color: white;
+            padding: 16px 12px;
+            text-align: left;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9em;
+        }
+
+        .content-preview pre table td {
+            padding: 14px 12px;
+            border-bottom: 1px solid #e9ecef;
+            transition: all var(--transition-speed);
+        }
+
+        .content-preview pre table tr:hover {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            transform: scale(1.01);
+        }
+        
+        .content-preview pre table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .content-preview pre blockquote {
+            border-left: 5px solid var(--jmu-gold);
+            background: linear-gradient(135deg, #fffef7 0%, #fffaed 100%);
+            padding: 20px 25px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 3px 10px rgba(203, 182, 119, 0.2);
+            position: relative;
+            transition: all var(--transition-speed);
+        }
+        
+        .content-preview pre blockquote::before {
+            content: '"';
+            font-size: 4em;
+            position: absolute;
+            left: 15px;
+            top: -10px;
+            color: var(--jmu-gold);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .content-preview pre blockquote:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px rgba(203, 182, 119, 0.3);
+        }
+
+        .content-preview pre .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .content-preview pre .badge-high {
+            background: linear-gradient(135deg, #d4edda, #a3e4b5);
+            color: #155724;
+            box-shadow: 0 2px 6px rgba(21, 87, 36, 0.2);
+        }
+
+        .content-preview pre .badge-medium {
+            background: linear-gradient(135deg, #fff3cd, #ffe69c);
+            color: #856404;
+            box-shadow: 0 2px 6px rgba(133, 100, 4, 0.2);
+        }
+
+        .content-preview pre .badge-low {
+            background: linear-gradient(135deg, #f8d7da, #f5c2c7);
+            color: #721c24;
+            box-shadow: 0 2px 6px rgba(114, 28, 36, 0.2);
+        }
+        
+        /* === SECTION HEADERS === */
+        .section-header {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            transition: all var(--transition-speed);
+        }
+        
+        .section-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .section-header:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+        
+        .section-header h2 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-header p {
+            margin: 0;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1em;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, var(--jmu-purple) 0%, #2d1951 100%);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.95em;
+            box-shadow: inset 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+                padding: 15px 10px;
+                gap: 10px;
+            }
+            
+            .tab-button {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                padding: 18px 25px;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .tab-button {
+                padding: 16px 25px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>💼 📊 Executive Communication & Business Productivity Dashboard</h1>
+            <div class="subtitle">MGT357 Evidence-Based Management | Fall 2025</div>
+            <div class="subtitle">Carter Reilly | <span id="current-date"></span></div>
+        </div>
+
+        <!-- Royal Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab(1)">🎯 Framework</button>
+            <button class="tab-button" onclick="showTab(2)">🔍 Evidence</button>
+            <button class="tab-button" onclick="showTab(3)">🔄 Aggregation</button>
+            <button class="tab-button" onclick="showTab(4)">⚡ Application</button>
+            <button class="tab-button" onclick="showTab(5)">📊 Assessment</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="tab1">
+            <h2>🎯 Problem & Solution Framework</h2>
+            <p>Define your management problem and explore solution constraints.</p>
+
+            <!-- Problem Definition -->
+            <div class="content-preview">
+                <h3>📋 Problem Definition</h3>
+                <div class="collapsible-content">
+                    <pre id="ask-problem-definition-content"></pre>
+                </div>
+            </div>
+
+            <!-- Stakeholder Analysis -->
+            <div class="content-preview">
+                <h3>👥 Stakeholder Analysis</h3>
+                <div class="collapsible-content">
+                    <pre id="ask-stakeholder-analysis-content"></pre>
+                </div>
+            </div>
+
+            <!-- Success Criteria -->
+            <div class="content-preview">
+                <h3>✅ Success Criteria Definition</h3>
+                <div class="collapsible-content">
+                    <pre id="ask-success-criteria-content"></pre>
+                </div>
+            </div>
+
+            <!-- Solution Constraints -->
+            <div class="content-preview">
+                <h3>🚧 Solution Constraints</h3>
+                <div class="collapsible-content">
+                    <pre id="ask-solution-constraints-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <h2>🔍 Evidence Hub</h2>
+            <p>Collect and evaluate evidence from multiple sources.</p>
+            
+            <!-- Scientific Evidence Section -->
+            <div class="section-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <h2>🔬 Scientific Evidence</h2>
+                <p>Peer-reviewed research and academic studies</p>
+            </div>
+
+            <div class="content-preview">
+                <h3>📚 Scientific Evidence: Research Sources</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-scientific-sources-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>🔍 Scientific Evidence: Research Methods</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-scientific-methods-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>⭐ Scientific Evidence: Quality Appraisal</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-scientific-appraisal-content"></pre>
+                </div>
+            </div>
+
+            <!-- Organizational Evidence Section -->
+            <div class="section-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h2>🏢 Organizational Evidence</h2>
+                <p>Internal data and organizational metrics</p>
+            </div>
+
+            <div class="content-preview">
+                <h3>📊 Organizational Evidence: Data Sources</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-organizational-sources-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>📋 Organizational Evidence: Collection Methods</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-organizational-methods-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>⭐ Organizational Evidence: Quality Appraisal</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-organizational-appraisal-content"></pre>
+                </div>
+            </div>
+
+            <!-- Practitioner Evidence Section -->
+            <div class="section-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <h2>👥 Practitioner Evidence</h2>
+                <p>Expert insights and professional experience</p>
+            </div>
+
+            <div class="content-preview">
+                <h3>� Practitioner Evidence: Expert Insights</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-practitioner-sources-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>📋 Practitioner Evidence: Acquisition Methods</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-practitioner-methods-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>⭐ Practitioner Evidence: Credibility Assessment</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-practitioner-appraisal-content"></pre>
+                </div>
+            </div>
+
+            <!-- Stakeholder Evidence Section -->
+            <div class="section-header" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                <h2>🗣️ Stakeholder Evidence</h2>
+                <p>Perspectives from affected parties and key stakeholders</p>
+            </div>
+
+            <div class="content-preview">
+                <h3>🗺️ Stakeholder Evidence: Identification & Mapping</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-stakeholder-methods-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>💬 Stakeholder Evidence: Voices & Perspectives</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-stakeholder-sources-content"></pre>
+                </div>
+            </div>
+
+            <div class="content-preview">
+                <h3>⚖️ Stakeholder Evidence: Critical Appraisal</h3>
+                <div class="collapsible-content">
+                    <pre id="evidence-stakeholder-appraisal-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <h2>🔄 Evidence Aggregation</h2>
+            <p>Synthesize and integrate your collected evidence.</p>
+            
+            <div class="content-preview">
+                <h3>🔗 Evidence Synthesis & Integration</h3>
+                <div class="collapsible-content">
+                    <pre id="synthesis-integration-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab4">
+            <h2>⚡ Solution Application</h2>
+            <p>Implement your evidence-based solution.</p>
+            
+            <div class="content-preview">
+                <h3>🚀 Implementation Plan & Execution</h3>
+                <div class="collapsible-content">
+                    <pre id="application-implementation-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab5">
+            <h2>📊 Assessment & Monitoring</h2>
+            <p>Evaluate the effectiveness of your implemented solution.</p>
+            
+            <div class="content-preview">
+                <h3>📈 Performance Monitoring & Evaluation</h3>
+                <div class="collapsible-content">
+                    <pre id="assessment-monitoring-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Carter Reilly | James Madison University | MGT357 Evidence-Based Management</p>
+        </div>
+    </div>
+
+    <script>
+        // Update date automatically
+        function updateDate() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Content data embedded directly
+        const contentData = {
+            'ask-problem-definition': `# 📊 Problem Definition Framework
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🔄 X → Y Framework
+### Current State (X - What's happening now that's problematic?)
+There is a significant breakdown in business-to-business communication channels, leading to inefficient information flow, delayed decision-making, and reduced collaboration between partner organizations. This is particularly evident during merger situations and cross-departmental projects.
+
+### Desired State (Y - What outcome do we want to achieve?)
+We aim to establish seamless, reliable communication channels between business partners, with clear protocols for information sharing, regular interaction opportunities, and structured feedback mechanisms that enhance collaborative efficiency and business relationships.
+
+## 🎯 PICOC Framework
+### Population (P - Who is affected by this problem?)
+👥 Primary Stakeholders:
+  ◆ Business partners and their key stakeholders
+  ◆ Internal teams managing external relationships
+  ◆ Operational staff involved in cross-company projects
+  ◆ Management teams from both organizations
+  ◆ Client-facing employees managing business relationships
+
+### Intervention (I - What solution/action are we considering?)
+🔧 Proposed Solutions:
+  ◈ Implementation of a dedicated communication hotline for urgent inter-business matters
+  ◈ Regular structured external networking events and team-building activities
+  ◈ Temporary inter-office exchange programs during merger periods
+  ◈ Digital collaboration platform implementation
+  ◈ Standardized communication protocols and templates
+
+### Comparison (C - What alternatives exist?)
+- Maintain current ad-hoc communication practices
+- Rely solely on email and traditional communication channels
+- Outsource communication coordination to third-party firms
+- Implement virtual-only communication solutions
+- Create separate dedicated liaison teams
+
+### Outcomes (O - What will success look like?)
+📊 Progress Towards Goals:
+[▓▓▓▓▓▓░░░░] 50% reduction in delays
+[▓▓▓▓▓▓▓░░░] 80% stakeholder satisfaction
+[▓▓▓▓░░░░░░] 4-hour response time target
+[▓▓▓░░░░░░░] 30% collaboration increase
+[▓▓▓▓▓░░░░░] Merger integration success
+
+### Context (C - Where/when does this apply?)
+- During active merger and acquisition processes
+- Across all geographical locations where business partnerships exist
+- Within cross-departmental projects involving multiple organizations
+- Particularly crucial during major organizational changes
+- Applicable to both formal and informal business relationships`,
+
+            'ask-stakeholder-analysis': `# Stakeholder Analysis
+# Identify and analyze all parties affected by your problem and solution
+
+## Internal Stakeholders
+
+### Senior Management
+- **Interest in Problem:** Direct impact on strategic initiatives, merger success rates, and organizational growth
+- **Interest in Solution:** Improved decision-making speed, better partner relationships, increased operational efficiency
+- **Influence Level:** High - Critical for resource allocation and cultural change
+- **Support Level:** Likely supporter, but concerned about implementation costs
+
+### Middle Management
+- **Interest in Problem:** Daily challenges in cross-team coordination and project delivery
+- **Interest in Solution:** Better team productivity, clearer communication channels, improved project outcomes
+- **Influence Level:** High - Key to successful implementation and team adoption
+- **Support Level:** Strong supporter, but may resist additional administrative burden
+
+### Employees/Staff
+- **Interest in Problem:** Frustration with unclear communication paths, delayed responses, work inefficiencies
+- **Interest in Solution:** Clearer protocols, faster response times, reduced work stress
+- **Influence Level:** Medium - Daily users of new communication systems
+- **Support Level:** Mixed - Supporters if solution simplifies work, resistant if adds complexity
+
+## External Stakeholders
+
+### Customers/Clients
+- **Interest in Problem:** Service delays and inconsistent communication affect customer experience
+- **Interest in Solution:** More reliable service delivery and faster response to inquiries
+- **Influence Level:** High - Their satisfaction directly impacts business success
+- **Support Level:** Strong supporters if solution improves service experience
+
+### Suppliers/Partners
+- **Interest in Problem:** Inefficient collaboration slows down joint projects and creates misunderstandings
+- **Interest in Solution:** Streamlined communication channels and clearer protocols
+- **Influence Level:** High - Critical to successful implementation across organizations
+- **Support Level:** Strong supporters, but may have concerns about adoption costs
+
+## Stakeholder Engagement Strategy
+
+### High Influence, High Interest (Manage Closely)
+- Senior Management: Regular status meetings, direct involvement in key decisions
+- Middle Management: Weekly implementation updates, leadership in pilot programs
+- Key Business Partners: Joint planning sessions, regular feedback cycles
+- Major Clients: Priority communication channels, dedicated feedback mechanisms`,
+
+            'ask-success-criteria': `# Success Criteria Definition
+# Define specific, measurable criteria to evaluate solution effectiveness
+
+## SMART Success Criteria
+
+### Criterion 1: Response Time Improvement
+- **Specific:** Average response time for inter-business communications
+- **Measurable:** Track time between initial message and first response
+- **Achievable:** Reduce average response time from 24 hours to 4 hours
+- **Relevant:** Directly addresses core communication delay issues
+- **Time-bound:** Achieve target within 3 months of implementation
+
+### Criterion 2: Cross-Organization Project Efficiency
+- **Specific:** Time spent in project coordination and communication
+- **Measurable:** 40% reduction in communication-related project delays
+- **Achievable:** Implement standardized protocols and digital platforms
+- **Relevant:** Tackles primary pain point in project delivery
+- **Time-bound:** Achieve improvement within 6 months of launch
+
+### Criterion 3: Stakeholder Satisfaction
+- **Specific:** Partner and internal staff satisfaction with communication
+- **Measurable:** Achieve 85% positive feedback on communication effectiveness
+- **Achievable:** Through systematic implementation of new channels
+- **Relevant:** Indicates successful adoption of new communication practices
+- **Time-bound:** Reach target satisfaction by end of 4 quarters
+
+## Measurement Framework
+
+### Quantitative Metrics
+**Communication Efficiency Metrics:**
+- Response Time: Reduce average response time to < 4 hours
+- Project Delays: 40% reduction in communication-related delays
+- Meeting Time: 30% reduction in time spent in coordination meetings
+- Issue Resolution: 50% reduction in miscommunication incidents
+- Platform Adoption: 95% staff usage of new communication tools
+
+**Business Impact Metrics:**
+- Cost Savings: 25% reduction in communication overhead costs
+- Productivity: 20% increase in cross-team project completion rate
+- Partner Satisfaction: Minimum 8.5/10 satisfaction score
+- Error Reduction: 60% decrease in communication-related errors
+- Staff Efficiency: 30% reduction in time spent on communication tasks`,
+
+            'ask-solution-constraints': `# Solution Constraints Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🚧 Resource Constraints
+### Budget Limitations
+- Implementation costs must stay within annual IT budget
+- Training costs need to be distributed across departments
+- ROI expected within 12 months of implementation
+
+### Time Constraints
+- Solution must be implemented before next merger cycle
+- Training needs to be completed within 3 months
+- Cannot disrupt current operations during transition
+
+### Technical Constraints
+- Must integrate with existing IT infrastructure
+- Security compliance requirements for all communications
+- Cross-platform compatibility required
+
+## 👥 Organizational Constraints
+### Policy Requirements
+- Compliance with data protection regulations
+- Adherence to corporate communication policies
+- Integration with existing security protocols
+
+### Cultural Considerations
+- Different communication styles across organizations
+- Various time zones and working hours
+- Multiple languages and cultural norms
+
+### Stakeholder Limitations
+- Limited availability for training sessions
+- Varying levels of technical expertise
+- Different priorities across departments
+
+## ⚠️ Risk Constraints
+### Security Concerns
+- Data privacy requirements
+- Information confidentiality during mergers
+- Access control and authentication needs
+
+### Operational Risks
+- Minimal disruption to daily operations
+- Backup systems required
+- Business continuity requirements
+
+## 📊 Performance Constraints
+### Technical Requirements
+- Maximum response time: 4 hours
+- System uptime: 99.9%
+- Support for multiple communication channels
+
+### Quality Standards
+- Message delivery confirmation
+- Audit trail requirements
+- Documentation standards
+
+### Scalability Needs
+- Must support growing user base
+- Expandable to new locations
+- Adaptable for future mergers`
+        };
+
+        // Load content function
+        function loadContent() {
+            Object.keys(contentData).forEach(key => {
+                const element = document.getElementById(key + '-content');
+                if(element) {
+                    element.textContent = contentData[key];
+                }
+            });
+            
+            // Load organizational evidence files from external files
+            loadExternalContent('evidence-organizational-sources', 'content/evidence-organizational-sources.txt');
+            loadExternalContent('evidence-organizational-methods', 'content/evidence-organizational-methods.txt');
+            loadExternalContent('evidence-organizational-appraisal', 'content/evidence-organizational-appraisal.txt');
+        }
+
+        // Function to load external text files
+        function loadExternalContent(elementId, filePath) {
+            const element = document.getElementById(elementId + '-content');
+            if (element) {
+                fetch(filePath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('File not found');
+                        }
+                        return response.text();
+                    })
+                    .then(text => {
+                        element.textContent = text;
+                    })
+                    .catch(error => {
+                        element.textContent = `Error loading content from ${filePath}. Please ensure the file exists in the correct location.\n\n${error.message}`;
+                        console.error('Error loading content:', error);
+                    });
+            }
+        }
+
+        // Tab functionality
+        let isTransitioning = false;
+        
+        function showTab(tabNumber) {
+            // Prevent rapid clicking during transition
+            if (isTransitioning) return;
+            isTransitioning = true;
+            
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Small delay to ensure fade out completes
+            setTimeout(() => {
+                // Show selected tab content
+                document.getElementById('tab' + tabNumber).classList.add('active');
+                
+                // Add active class to selected tab button
+                tabButtons[tabNumber - 1].classList.add('active');
+                
+                // Re-enable transitions after animation completes
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 400);
+            }, 50);
+        }
+
+        // Toggle collapsible sections
+        function toggleSection(element) {
+            const content = element.nextElementSibling;
+            element.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            updateDate();
+            loadContent();
+            
+            // Add click handlers to all h3 elements in content-preview divs
+            document.querySelectorAll('.content-preview h3').forEach(h3 => {
+                h3.addEventListener('click', function() {
+                    toggleSection(this);
+                });
+            });
+            
+            // Add mouse tracking effect to tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('mousemove', function(e) {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    if (!button.classList.contains('active')) {
+                        button.style.transform = `translateY(-5px) scale(1.05) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    }
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    if (!button.classList.contains('active')) {
+                        button.style.transform = '';
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- External Content Loader -->
+    <script src="content-loader.js"></script>
+</body>
+</html>

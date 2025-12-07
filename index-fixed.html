@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My EBM Dashboard | MGT357 - Fall 2025</title>
+    <style>
+        /* === CSS CUSTOM PROPERTIES === */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #450084 0%, #8D4B98 100%);
+            --jmu-purple: #450084;
+            --jmu-gold: #CBB677;
+            --tab-inactive: #95a5a6;
+            --step-green: #450084;
+            --step-blue: #CBB677;
+            --border-radius: 15px;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .progress-step {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .progress-step:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .progress-step.active {
+            background: var(--jmu-gold);
+            color: var(--jmu-purple);
+            border-color: white;
+            font-weight: bold;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            overflow-x: auto;
+            border-bottom: 3px solid var(--jmu-purple);
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 20px 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--tab-inactive);
+            transition: all var(--transition-speed);
+            border-bottom: 3px solid transparent;
+            clip-path: polygon(10% 0%, 90% 0%, 80% 100%, 20% 100%);
+            margin: 0 5px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        }
+
+        .tab-button:hover {
+            background: linear-gradient(135deg, var(--jmu-purple), #6a4c93);
+            color: white;
+        }
+
+        .tab-button.active {
+            background: var(--primary-gradient);
+            color: white;
+            border-bottom-color: var(--jmu-gold);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 40px;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .content-preview {
+            background: #f8f9fa;
+            border-left: 5px solid var(--jmu-purple);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .content-preview h3 {
+            color: var(--jmu-purple);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .content-preview pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: inherit;
+            margin: 0;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .footer {
+            background: var(--jmu-purple);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab-button {
+                clip-path: none;
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .progress-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .progress-step {
+                width: 90%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>📊 My EBM Dashboard</h1>
+            <div class="subtitle">MGT357 Evidence-Based Management | Fall 2025</div>
+            <div class="subtitle">Carter Reilly | <span id="current-date"></span></div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-step active" onclick="showTab(1)">🎯 Framework</div>
+                <div class="progress-step pending" onclick="showTab(2)">🔍 Evidence</div>
+                <div class="progress-step pending" onclick="showTab(3)">⚖️ Synthesis</div>
+                <div class="progress-step pending" onclick="showTab(4)">✨ Apply</div>
+                <div class="progress-step pending" onclick="showTab(5)">📊 Assess</div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab(1)">🎯 Problem & Solution Framework</button>
+            <button class="tab-button" onclick="showTab(2)">🔍 Evidence Hub</button>
+            <button class="tab-button" onclick="showTab(3)">🔄 Aggregation</button>
+            <button class="tab-button" onclick="showTab(4)">⚡ Application</button>
+            <button class="tab-button" onclick="showTab(5)">📊 Assessment</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="tab1">
+            <h2>🎯 Problem & Solution Framework</h2>
+            <p>Define your management problem and explore solution constraints.</p>
+
+            <!-- Problem Definition -->
+            <div class="content-preview">
+                <h3>📋 Problem Definition</h3>
+                <pre id="ask-problem-definition-content"></pre>
+            </div>
+
+            <!-- Stakeholder Analysis -->
+            <div class="content-preview">
+                <h3>👥 Stakeholder Analysis</h3>
+                <pre id="ask-stakeholder-analysis-content"></pre>
+            </div>
+
+            <!-- Success Criteria -->
+            <div class="content-preview">
+                <h3>✅ Success Criteria Definition</h3>
+                <pre id="ask-success-criteria-content"></pre>
+            </div>
+
+            <!-- Solution Constraints -->
+            <div class="content-preview">
+                <h3>🚧 Solution Constraints</h3>
+                <pre id="ask-solution-constraints-content"></pre>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab2">
+            <h2>🔍 Evidence Hub</h2>
+            <p>Collect and evaluate evidence from multiple sources.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Evidence collection tools and source management will be available here.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab3">
+            <h2>🔄 Evidence Aggregation</h2>
+            <p>Synthesize and integrate your collected evidence.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Evidence synthesis and integration tools will be available here.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab4">
+            <h2>⚡ Solution Application</h2>
+            <p>Implement your evidence-based solution.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Implementation planning and execution tools will be available here.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="tab5">
+            <h2>📊 Assessment & Monitoring</h2>
+            <p>Evaluate the effectiveness of your implemented solution.</p>
+            <div class="content-preview">
+                <h3>Coming Soon</h3>
+                <p>Assessment and monitoring tools will be available here.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Carter Reilly | James Madison University | MGT357 Evidence-Based Management</p>
+        </div>
+    </div>
+
+    <script>
+        // Update date automatically
+        function updateDate() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Content data embedded directly
+        const contentData = {
+            'ask-problem-definition': `# 📊 Problem Definition Framework
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🔄 X → Y Framework
+### Current State (X - What's happening now that's problematic?)
+There is a significant breakdown in business-to-business communication channels, leading to inefficient information flow, delayed decision-making, and reduced collaboration between partner organizations. This is particularly evident during merger situations and cross-departmental projects.
+
+### Desired State (Y - What outcome do we want to achieve?)
+We aim to establish seamless, reliable communication channels between business partners, with clear protocols for information sharing, regular interaction opportunities, and structured feedback mechanisms that enhance collaborative efficiency and business relationships.
+
+## 🎯 PICOC Framework
+### Population (P - Who is affected by this problem?)
+👥 Primary Stakeholders:
+  ◆ Business partners and their key stakeholders
+  ◆ Internal teams managing external relationships
+  ◆ Operational staff involved in cross-company projects
+  ◆ Management teams from both organizations
+  ◆ Client-facing employees managing business relationships
+
+### Intervention (I - What solution/action are we considering?)
+🔧 Proposed Solutions:
+  ◈ Implementation of a dedicated communication hotline for urgent inter-business matters
+  ◈ Regular structured external networking events and team-building activities
+  ◈ Temporary inter-office exchange programs during merger periods
+  ◈ Digital collaboration platform implementation
+  ◈ Standardized communication protocols and templates
+
+### Comparison (C - What alternatives exist?)
+- Maintain current ad-hoc communication practices
+- Rely solely on email and traditional communication channels
+- Outsource communication coordination to third-party firms
+- Implement virtual-only communication solutions
+- Create separate dedicated liaison teams
+
+### Outcomes (O - What will success look like?)
+📊 Progress Towards Goals:
+[▓▓▓▓▓▓░░░░] 50% reduction in delays
+[▓▓▓▓▓▓▓░░░] 80% stakeholder satisfaction
+[▓▓▓▓░░░░░░] 4-hour response time target
+[▓▓▓░░░░░░░] 30% collaboration increase
+[▓▓▓▓▓░░░░░] Merger integration success
+
+### Context (C - Where/when does this apply?)
+- During active merger and acquisition processes
+- Across all geographical locations where business partnerships exist
+- Within cross-departmental projects involving multiple organizations
+- Particularly crucial during major organizational changes
+- Applicable to both formal and informal business relationships`,
+
+            'ask-stakeholder-analysis': `# Stakeholder Analysis
+# Identify and analyze all parties affected by your problem and solution
+
+## Internal Stakeholders
+
+### Senior Management
+- **Interest in Problem:** Direct impact on strategic initiatives, merger success rates, and organizational growth
+- **Interest in Solution:** Improved decision-making speed, better partner relationships, increased operational efficiency
+- **Influence Level:** High - Critical for resource allocation and cultural change
+- **Support Level:** Likely supporter, but concerned about implementation costs
+
+### Middle Management
+- **Interest in Problem:** Daily challenges in cross-team coordination and project delivery
+- **Interest in Solution:** Better team productivity, clearer communication channels, improved project outcomes
+- **Influence Level:** High - Key to successful implementation and team adoption
+- **Support Level:** Strong supporter, but may resist additional administrative burden
+
+### Employees/Staff
+- **Interest in Problem:** Frustration with unclear communication paths, delayed responses, work inefficiencies
+- **Interest in Solution:** Clearer protocols, faster response times, reduced work stress
+- **Influence Level:** Medium - Daily users of new communication systems
+- **Support Level:** Mixed - Supporters if solution simplifies work, resistant if adds complexity
+
+## External Stakeholders
+
+### Customers/Clients
+- **Interest in Problem:** Service delays and inconsistent communication affect customer experience
+- **Interest in Solution:** More reliable service delivery and faster response to inquiries
+- **Influence Level:** High - Their satisfaction directly impacts business success
+- **Support Level:** Strong supporters if solution improves service experience
+
+### Suppliers/Partners
+- **Interest in Problem:** Inefficient collaboration slows down joint projects and creates misunderstandings
+- **Interest in Solution:** Streamlined communication channels and clearer protocols
+- **Influence Level:** High - Critical to successful implementation across organizations
+- **Support Level:** Strong supporters, but may have concerns about adoption costs
+
+## Stakeholder Engagement Strategy
+
+### High Influence, High Interest (Manage Closely)
+- Senior Management: Regular status meetings, direct involvement in key decisions
+- Middle Management: Weekly implementation updates, leadership in pilot programs
+- Key Business Partners: Joint planning sessions, regular feedback cycles
+- Major Clients: Priority communication channels, dedicated feedback mechanisms`,
+
+            'ask-success-criteria': `# Success Criteria Definition
+# Define specific, measurable criteria to evaluate solution effectiveness
+
+## SMART Success Criteria
+
+### Criterion 1: Response Time Improvement
+- **Specific:** Average response time for inter-business communications
+- **Measurable:** Track time between initial message and first response
+- **Achievable:** Reduce average response time from 24 hours to 4 hours
+- **Relevant:** Directly addresses core communication delay issues
+- **Time-bound:** Achieve target within 3 months of implementation
+
+### Criterion 2: Cross-Organization Project Efficiency
+- **Specific:** Time spent in project coordination and communication
+- **Measurable:** 40% reduction in communication-related project delays
+- **Achievable:** Implement standardized protocols and digital platforms
+- **Relevant:** Tackles primary pain point in project delivery
+- **Time-bound:** Achieve improvement within 6 months of launch
+
+### Criterion 3: Stakeholder Satisfaction
+- **Specific:** Partner and internal staff satisfaction with communication
+- **Measurable:** Achieve 85% positive feedback on communication effectiveness
+- **Achievable:** Through systematic implementation of new channels
+- **Relevant:** Indicates successful adoption of new communication practices
+- **Time-bound:** Reach target satisfaction by end of 4 quarters
+
+## Measurement Framework
+
+### Quantitative Metrics
+**Communication Efficiency Metrics:**
+- Response Time: Reduce average response time to < 4 hours
+- Project Delays: 40% reduction in communication-related delays
+- Meeting Time: 30% reduction in time spent in coordination meetings
+- Issue Resolution: 50% reduction in miscommunication incidents
+- Platform Adoption: 95% staff usage of new communication tools
+
+**Business Impact Metrics:**
+- Cost Savings: 25% reduction in communication overhead costs
+- Productivity: 20% increase in cross-team project completion rate
+- Partner Satisfaction: Minimum 8.5/10 satisfaction score
+- Error Reduction: 60% decrease in communication-related errors
+- Staff Efficiency: 30% reduction in time spent on communication tasks`,
+
+            'ask-solution-constraints': `# Solution Constraints Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🚧 Resource Constraints
+### Budget Limitations
+- Implementation costs must stay within annual IT budget
+- Training costs need to be distributed across departments
+- ROI expected within 12 months of implementation
+
+### Time Constraints
+- Solution must be implemented before next merger cycle
+- Training needs to be completed within 3 months
+- Cannot disrupt current operations during transition
+
+### Technical Constraints
+- Must integrate with existing IT infrastructure
+- Security compliance requirements for all communications
+- Cross-platform compatibility required
+
+## 👥 Organizational Constraints
+### Policy Requirements
+- Compliance with data protection regulations
+- Adherence to corporate communication policies
+- Integration with existing security protocols
+
+### Cultural Considerations
+- Different communication styles across organizations
+- Various time zones and working hours
+- Multiple languages and cultural norms
+
+### Stakeholder Limitations
+- Limited availability for training sessions
+- Varying levels of technical expertise
+- Different priorities across departments
+
+## ⚠️ Risk Constraints
+### Security Concerns
+- Data privacy requirements
+- Information confidentiality during mergers
+- Access control and authentication needs
+
+### Operational Risks
+- Minimal disruption to daily operations
+- Backup systems required
+- Business continuity requirements
+
+## 📊 Performance Constraints
+### Technical Requirements
+- Maximum response time: 4 hours
+- System uptime: 99.9%
+- Support for multiple communication channels
+
+### Quality Standards
+- Message delivery confirmation
+- Audit trail requirements
+- Documentation standards
+
+### Scalability Needs
+- Must support growing user base
+- Expandable to new locations
+- Adaptable for future mergers`
+        };
+
+        // Load content function
+        function loadContent() {
+            Object.keys(contentData).forEach(key => {
+                const element = document.getElementById(key + '-content');
+                if(element) {
+                    element.textContent = contentData[key];
+                }
+            });
+        }
+
+        // Tab functionality
+        function showTab(tabNumber) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Remove active class from all progress steps
+            const progressSteps = document.querySelectorAll('.progress-step');
+            progressSteps.forEach(step => step.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById('tab' + tabNumber).classList.add('active');
+            
+            // Add active class to selected tab button
+            tabButtons[tabNumber - 1].classList.add('active');
+            
+            // Add active class to selected progress step
+            progressSteps[tabNumber - 1].classList.add('active');
+        }
+
+        // Initialize page
+        window.addEventListener('load', function() {
+            updateDate();
+            loadContent();
+        });
+    </script>
+</body>
+</html>

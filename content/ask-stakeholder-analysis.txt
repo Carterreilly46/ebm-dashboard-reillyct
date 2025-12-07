@@ -1,0 +1,132 @@
+# Stakeholder Analysis
+# Identify and analyze all parties affected by your problem and solution
+
+## Internal Stakeholders
+
+### Frontline Employees
+- **Interest in Problem:** Directly experience role confusion and anxiety during organizational changes
+- **Interest in Solution:** Need clear, frequent updates to understand their role, job security, and expectations
+- **Influence Level:** Medium - Their productivity and engagement directly affect outcomes
+- **Support Level:** Strong supporters - desperately want more clarity and communication
+
+### Middle Management
+- **Interest in Problem:** Caught between executive decisions and team questions; struggle without clear information
+- **Interest in Solution:** Require timely executive communications to effectively lead teams through change
+- **Influence Level:** High - Critical translators of executive messages and culture carriers
+- **Support Level:** Strong supporters, but concerned about time required for cascading messages
+
+### Senior Leadership/Executives
+- **Interest in Problem:** Responsible for successful change execution; reputation at stake
+- **Interest in Solution:** Need efficient ways to maintain trust and productivity during transitions
+- **Influence Level:** Very High - Decision-makers and resource allocators
+- **Support Level:** Mixed - Supporters if time-efficient; may resist increased communication burden
+
+### Human Resources (HR) Department
+- **Interest in Problem:** Manage increased turnover, anxiety, and employee relations issues during change
+- **Interest in Solution:** Reduces burden of crisis management and retention challenges
+- **Influence Level:** High - Partners with leadership on change management strategy
+- **Support Level:** Strong supporters - directly benefits their workload and effectiveness
+
+### Internal Communications Team
+- **Interest in Problem:** Responsible for message creation and distribution during changes
+- **Interest in Solution:** Clear mandate and resources to implement structured communication
+- **Influence Level:** Medium-High - Executes communication strategy
+- **Support Level:** Very strong supporters - aligns with their core mission
+
+### IT/Technology Teams
+- **Interest in Problem:** May need to support communication platforms and tools
+- **Interest in Solution:** Requires infrastructure for increased communication channels
+- **Influence Level:** Medium - Enables technical execution
+- **Support Level:** Neutral to supportive - depends on resource requirements
+
+### Other Internal Groups
+**Union Representatives / Employee Resource Groups**
+- **Interest in Problem:** Represent employee concerns during organizational uncertainty
+- **Interest in Solution:** Want transparent, frequent communication to reduce member anxiety
+- **Influence Level:** Medium - Voice of collective employee concerns
+- **Support Level:** Strong supporters if communication is genuine and two-way
+
+## External Stakeholders
+
+### Customers/Clients
+- **Interest in Problem:** May experience service disruptions if employees are confused or disengaged
+- **Interest in Solution:** Benefit from maintained service quality during organizational transitions
+- **Influence Level:** High - Revenue impact and brand reputation
+- **Support Level:** Indirectly supportive - care about outcomes, not internal processes
+
+### Shareholders/Investors
+- **Interest in Problem:** Concerned about productivity losses and failed change initiatives
+- **Interest in Solution:** Want successful transitions that protect company value
+- **Influence Level:** Very High - Financial stakeholders with board influence
+- **Support Level:** Supportive if demonstrates ROI and risk mitigation
+
+### Industry Analysts/Media
+- **Interest in Problem:** Report on organizational changes and employee morale
+- **Interest in Solution:** Story of successful change management and employee engagement
+- **Influence Level:** Medium - Shape public perception
+- **Support Level:** Neutral - interested in outcomes and newsworthy stories
+
+### Competitors
+- **Interest in Problem:** May benefit from our talent leaving during poorly managed change
+- **Interest in Solution:** We become harder to compete against if we retain talent
+- **Influence Level:** Low - No direct influence on our decisions
+- **Support Level:** Not applicable - external observers
+
+## Stakeholder Engagement Strategy
+
+### High Influence, High Interest (Manage Closely)
+- Senior Leadership: One-on-one briefings, involvement in communication strategy design
+- Middle Management: Weekly planning sessions, early preview of messages, feedback loops
+- HR Department: Joint planning, co-ownership of change management approach
+- Shareholders/Investors: Quarterly updates on change progress and employee engagement metrics
+
+### High Influence, Low Interest (Keep Satisfied)
+- IT Department: Technical requirements briefings, adequate lead time for infrastructure
+- Board of Directors: High-level summaries of communication effectiveness metrics
+- Legal/Compliance: Review of communication content for risk management
+- Finance Department: Budget justifications and ROI projections
+
+### Low Influence, High Interest (Keep Informed)
+- Frontline Employees: Regular town halls, email updates, accessible Q&A channels
+- Internal Communications Team: Daily coordination, content development collaboration
+- Union Representatives: Transparent sharing of communication plans and timelines
+- Employee Resource Groups: Regular briefings and feedback opportunities
+
+### Low Influence, Low Interest (Monitor)
+- Industry Media: Press releases on major milestones only
+- Competitors: No direct engagement
+- General Public: Standard corporate communications
+- Industry Associations: Periodic case study sharing (post-implementation)
+
+## Key Stakeholder Insights for Evidence Collection
+
+### Who to Interview/Survey
+- Employees at various levels who experienced recent organizational changes
+- Middle managers who cascade executive messages to teams
+- HR business partners supporting change initiatives
+- Internal communications professionals with change experience
+- Executives who have led major organizational transitions
+- Employee representatives (union reps, ERG leaders)
+
+### What Questions to Ask
+- How often do you currently receive updates from leadership during changes?
+- How clear are you about your role and responsibilities during transitions?
+- What communication methods are most effective for you (email, video, town halls)?
+- How does communication frequency affect your productivity and anxiety levels?
+- What would ideal executive communication look like during organizational change?
+- How quickly do you need information to maintain productivity?
+
+### How to Engage
+- Employees: Anonymous online surveys, focus groups by department/level
+- Middle Management: In-depth interviews and workshops
+- Senior Leadership: One-on-one executive interviews
+- HR Teams: Collaborative data analysis sessions
+- Past Change Participants: Retrospective surveys and case studies
+- Internal Communications: Process mapping and capability assessment
+
+---
+INSTRUCTIONS:
+1. Be specific about each stakeholder group's interests and influence
+2. Consider both obvious and hidden stakeholders
+3. Think about implementation challenges from stakeholder perspectives
+4. This analysis will guide your stakeholder evidence collection

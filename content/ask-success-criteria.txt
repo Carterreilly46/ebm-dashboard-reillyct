@@ -1,0 +1,226 @@
+# Success Criteria Definition
+# Define specific, measurable criteria to evaluate solution effectiveness
+
+## SMART Success Criteria
+
+### Criterion 1: Executive Communication Frequency
+- **Specific:** Number of executive communications per week during organizational changes
+- **Measurable:** Track all executive messages (video, email, town halls, Q&A sessions)
+- **Achievable:** Increase from current 0.5 per week to minimum 2-3 per week
+- **Relevant:** Directly addresses the lack of regular leadership communication
+- **Time-bound:** Achieve target frequency within 2 weeks of change announcement
+
+### Criterion 2: Employee Role Clarity
+- **Specific:** Percentage of employees who clearly understand their role and responsibilities
+- **Measurable:** Monthly pulse surveys with 5-point clarity scale
+- **Achievable:** Maintain 80% role clarity score during transitions (vs. 45% baseline)
+- **Relevant:** Core outcome measuring effectiveness of communication
+- **Time-bound:** Achieve within 30 days of increased communication implementation
+
+### Criterion 3: Productivity Maintenance
+- **Specific:** Sustained productivity levels during organizational changes
+- **Measurable:** Track output metrics, project completion rates, quality scores
+- **Achievable:** Maintain 90% of baseline productivity (vs. typical 60-70% drop)
+- **Relevant:** Demonstrates that clarity leads to maintained performance
+- **Time-bound:** Sustained throughout change period (typically 3-6 months)
+
+## Measurement Framework
+
+### Quantitative Metrics
+**Communication Frequency Metrics:**
+- Executive messages per week: Minimum 2-3 during active change
+- Town hall meetings: Bi-weekly during transition periods
+- Q&A response time: < 48 hours for employee questions
+- Communication channel diversity: Use of 3+ methods (video, email, live)
+- Leadership visibility: Executives present at 80% of team meetings
+
+**Role Clarity Metrics:**
+- Role clarity survey score: 80% reporting "clear" or "very clear"
+- Questions to HR/managers: 50% reduction in role-related inquiries
+- Job description alignment: 90% of employees confirm accuracy
+- Decision-making clarity: 75% know their authority level
+- Reporting structure understanding: 95% can map their org chart
+
+**Productivity Metrics:**
+- Output per employee: Maintain 90% of baseline during change
+- Project completion rate: Stay within 10% of pre-change timelines
+- Quality scores: No decline below 85% of baseline
+- Absenteeism: Keep below 5% increase from baseline
+- Time to task completion: Within 15% of standard benchmarks
+
+### Qualitative Indicators
+**Communication Quality:**
+- Message clarity and consistency across channels
+- Tone appropriateness for sensitive organizational changes
+- Two-way dialogue opportunities (Q&A, feedback channels)
+- Transparency about timelines and decision-making process
+- Personalization of messages to different employee groups
+
+**Employee Experience:**
+- Reduced anxiety and uncertainty about the future
+- Increased confidence in leadership during transitions
+- Sense of being valued and kept informed
+- Trust that leaders understand employee concerns
+- Feeling empowered to ask questions and voice concerns
+
+**Cultural Indicators:**
+- Maintained or improved employee engagement scores
+- Positive informal conversations about leadership communication
+- Reduced rumor mill and hallway speculation
+- Increased participation in feedback opportunities
+- Stronger sense of organizational identity during change
+
+### Leading vs. Lagging Indicators
+
+#### Leading Indicators (Early signals of progress)
+- Week 1: Increase in executive message frequency
+- Week 2: Employee awareness of communication channels (survey)
+- Week 3: Attendance rates at town hall meetings
+- Week 4: Number of questions submitted to leadership Q&A
+- Month 1: Early role clarity pulse survey results
+- Month 2: Manager confidence in cascading messages
+- Month 2: Employee sentiment in informal feedback
+
+#### Lagging Indicators (Final outcomes)
+- Month 3: Overall role clarity scores reaching 80%
+- Month 3-6: Sustained productivity at 90% of baseline
+- Month 6: Voluntary turnover rates vs. industry benchmark
+- Month 6: Employee engagement survey results
+- Month 9: Post-change performance reviews
+- Month 12: Retention of high performers through transition
+- Year 1: Successful achievement of change objectives
+
+## Baseline Measurements
+
+### Current State Metrics
+**Metric 1:** Executive Communication Frequency = 0.5 messages/week (ad hoc)
+**Metric 2:** Employee Role Clarity = 45% report clear understanding
+**Metric 3:** Productivity During Change = 60-70% of baseline (typical drop)
+**Metric 4:** Employee Confidence = 4.2/10 in leadership during transitions
+**Metric 5:** Voluntary Turnover During Change = 18% (vs. 12% normal)
+
+### Data Collection Plan
+- Weekly tracking of executive communications (automated via intranet)
+- Bi-weekly pulse surveys on role clarity (5 questions, 2-minute survey)
+- Monthly productivity metrics from existing performance systems
+- Quarterly employee engagement surveys
+- HR analytics dashboard for turnover and absenteeism
+- Town hall attendance and Q&A participation tracking
+- Sentiment analysis of employee feedback channels
+
+## Success Thresholds
+
+### Minimum Acceptable Improvement
+- Communication frequency: 1-2 executive messages per week
+- Role clarity: 65% of employees report clear understanding
+- Productivity: Maintain 75% of baseline during change
+- Employee confidence: 6.0/10 in leadership during transitions
+- Turnover: Keep voluntary departures below 15%
+
+### Target Performance Level
+- Communication frequency: 2-3 executive messages per week
+- Role clarity: 80% of employees report clear understanding
+- Productivity: Maintain 90% of baseline during change
+- Employee confidence: 7.5/10 in leadership during transitions
+- Turnover: Keep voluntary departures at normal 12%
+
+### Stretch Goal
+- Communication frequency: 3-4+ executive messages per week
+- Role clarity: 90% of employees report clear understanding
+- Productivity: Maintain 95%+ of baseline during change
+- Employee confidence: 8.5/10 in leadership during transitions
+- Turnover: Improve to 10% (below normal baseline)
+
+## Stakeholder-Specific Success Criteria
+
+### Management Success Measures
+- Reduced time spent answering employee questions about roles/changes
+- Higher manager confidence in supporting teams through transitions
+- Improved team performance metrics during change periods
+- Reduced escalations to HR about uncertainty and anxiety
+- Faster achievement of change initiative milestones
+
+### Employee Success Measures
+- Clear understanding of role, responsibilities, and expectations
+- Reduced anxiety and stress during organizational changes
+- Confidence in job security and career path
+- Feeling valued and informed by leadership
+- Maintained work-life balance during transitions
+
+### HR/Leadership Success Measures
+- Lower voluntary turnover during change periods
+- Reduced employee relations issues and complaints
+- Successful achievement of organizational change objectives
+- Maintained or improved employee engagement scores
+- Positive reputation as an employer during transitions
+
+## Risk Indicators
+
+### Red Flags
+- Communication frequency drops below 1 per week
+- Role clarity scores declining or stagnant below 60%
+- Productivity drops more than 30% from baseline
+- Voluntary turnover spikes above 20%
+- Increased absenteeism or stress-related leave
+
+### Mitigation Triggers
+- Role clarity scores below 70% for 2+ consecutive weeks
+- Productivity decline exceeds 25% from baseline
+- Employee sentiment scores drop below 5.0/10
+- More than 15% increase in HR inquiries about roles/changes
+- Town hall attendance drops below 50% of employees
+
+## Timeline for Assessment
+
+### Short-term (Weeks 1-4)
+- Executive communication frequency reaches 2+ per week
+- Communication channels established and publicized
+- First pulse survey shows awareness of increased communication
+- Employee questions submitted to Q&A channels
+- Manager training completed on message cascading
+
+### Medium-term (Months 2-3)
+- Role clarity scores reach 70-75%
+- Productivity stabilizes at 80-85% of baseline
+- Employee confidence scores improve to 6.5-7.0/10
+- Voluntary turnover trending toward normal rates
+- Positive feedback themes emerging in surveys
+
+### Long-term (Months 4-12)
+- Full target metrics achievement (80% clarity, 90% productivity)
+- Sustained behavioral change in communication patterns
+- Employee engagement scores return to or exceed pre-change levels
+- Successful completion of organizational change objectives
+- Best practices documented for future transitions
+
+## Reporting Framework
+
+### Dashboard Metrics
+- Real-time executive communication frequency tracking
+- Weekly role clarity pulse survey results
+- Monthly productivity trend lines vs. baseline
+- Employee confidence/sentiment scores
+- Voluntary turnover rates
+- Town hall attendance and Q&A participation
+- Communication channel usage analytics
+
+### Regular Reports
+- Weekly: Communication frequency and employee feedback highlights
+- Bi-weekly: Role clarity pulse survey results with trend analysis
+- Monthly: Comprehensive productivity and engagement metrics
+- Quarterly: Full change management scorecard with recommendations
+
+### Milestone Reviews
+- Week 2: Initial implementation assessment
+- Month 1: First month effectiveness review
+- Month 3: Quarter 1 comprehensive evaluation
+- Month 6: Mid-transition impact analysis
+- Month 12: Full-year post-change assessment
+
+---
+INSTRUCTIONS:
+1. Be specific and measurable - avoid vague terms like "better" or "improved"
+2. Ensure criteria are achievable given your resources and timeline
+3. Include both quantitative and qualitative measures
+4. Consider different stakeholder perspectives on success
+5. Plan how you'll actually collect the measurement data

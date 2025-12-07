@@ -1,0 +1,109 @@
+# Solution Constraints Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🚧 Resource Constraints
+### Budget Limitations
+- Communication platform costs must fit within existing IT/HR budgets
+- Video production and town hall logistics require modest investment
+- Survey tools and analytics software may need new licenses
+- ROI expected through reduced turnover costs and maintained productivity
+
+### Time Constraints
+- Executive schedules are heavily committed during transitions
+- Communication prep time competes with other change management tasks
+- Cannot delay critical business decisions to produce communications
+- Messages must be timely (within 24-48 hours of major decisions)
+
+### Human Resource Constraints
+- Limited internal communications team capacity (2-3 FTE)
+- Executive availability for regular video recordings and town halls
+- Manager time needed to cascade messages to teams
+- HR bandwidth to monitor employee sentiment and feedback
+
+### Technical Constraints
+- Must work with existing email, intranet, and video platforms
+- Mobile accessibility for remote/field employees
+- Accessibility compliance (captions, transcripts) required
+- Integration with existing HR/engagement survey tools
+- Data privacy for employee feedback and sentiment tracking
+
+## 👥 Organizational Constraints
+### Policy Requirements
+- Legal review required for sensitive communications (layoffs, restructuring)
+- Consistency with employer brand and communication guidelines
+- Compliance with labor laws regarding organizational changes
+- Union notification requirements (if applicable)
+- Securities regulations for publicly traded companies
+
+### Cultural Considerations
+- Varying preferences for communication styles across generations
+- Different information needs at various organizational levels
+- Multiple languages for global workforce
+- Remote vs. in-office employee access needs
+- Trust levels with leadership vary across departments
+
+### Leadership Limitations
+- Executive comfort level with video/public speaking
+- Consistency in tone and message across leadership team
+- Balancing transparency with confidentiality requirements
+- Managing competing demands on executive time
+- Varying communication skills among senior leaders
+
+## ⚠️ Risk Constraints
+### Communication Risks
+- Message fatigue if frequency is too high without value
+- Inconsistent messaging across channels or leaders
+- Information leaks before official announcements
+- Misinterpretation of incomplete information
+- Over-promising and under-delivering on commitments
+
+### Operational Risks
+- Communication activities cannot disrupt critical operations
+- Must maintain business continuity during transitions
+- Risk of productivity loss if employees spend too much time in meetings
+- Potential for negative sentiment if communications are perceived as insincere
+- Backlash if employee feedback is collected but not acted upon
+
+### Change Management Risks
+- Resistance from executives who prefer less transparency
+- Middle manager anxiety about answering difficult questions
+- Employee skepticism based on past communication failures
+- Information overload during already stressful transitions
+- Unrealistic employee expectations for frequency of updates
+
+## 📊 Performance Constraints
+### Communication Quality Standards
+- Messages must be clear, concise, and action-oriented
+- Tone must balance optimism with realism
+- Content accuracy verified before distribution
+- Consistency across all communication channels
+- Professional production quality for video content
+
+### Timeliness Requirements
+- Critical updates within 24 hours of decisions
+- Regular cadence maintained (2-3 times per week minimum)
+- Q&A responses within 48 hours
+- Town halls scheduled with adequate notice (5-7 days)
+- Survey results analyzed and shared within 1 week
+
+### Measurement Standards
+- Role clarity surveys must achieve 70%+ response rate
+- Productivity metrics tracked weekly with 95% accuracy
+- Employee sentiment tracked with validated tools
+- Communication reach: 90%+ of employees access messages
+- Engagement metrics: 60%+ open/view rates for communications
+
+### Scalability Needs
+- System must support organization size (e.g., 5,000-50,000 employees)
+- Scalable to multiple business units and geographies
+- Adaptable communication frequency based on change intensity
+- Sustainable long-term without burning out communicators
+- Replicable framework for future organizational changes
+
+---
+INSTRUCTIONS:
+1. Consider all constraint categories when designing communication strategy
+2. Prioritize constraints based on organizational impact and feasibility
+3. Document assumptions and dependencies for executive buy-in
+4. Update constraints as implementation reveals new challenges
+5. Balance ideal frequency with realistic executive and employee capacity

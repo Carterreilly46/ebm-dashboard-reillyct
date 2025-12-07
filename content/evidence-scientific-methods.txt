@@ -1,0 +1,255 @@
+# 🔬 Scientific Evidence: Search & Selection Methods
+
+---
+
+## 🎯 Research Question
+
+**Does scientific research support the communication → role clarity → productivity pathway?**
+
+- **X (Independent):** Executive communication during organizational change
+- **M (Mediator):** Employee role clarity
+- **Y (Outcome):** Organizational productivity/performance
+
+---
+
+## 📚 Database Search Strategy
+
+**Three databases searched systematically:**
+
+| Database | Coverage | Focus Area |
+|----------|----------|------------|
+| **Google Scholar** | 1990-2025 | Broad management/organizational research |
+| **APA PsycINFO** | 1970-present | Work psychology, role clarity constructs |
+| **EBSCO Business Source** | 1980-present | Leadership communication, organizational outcomes |
+
+---
+
+## 🔍 Search Terms Used
+
+**Primary Boolean String:**
+```
+("organizational communication" OR "leadership communication" OR "executive communication")
+AND ("role clarity" OR "role ambiguity" OR "job clarity")
+AND ("productivity" OR "performance" OR "effectiveness")
+AND ("effect size" OR "meta-analysis" OR "correlation")
+```
+
+**Filters Applied:**
+✅ Peer-reviewed journals only | ✅ Quantitative with effect sizes | ✅ English language  
+❌ Excluded: Books, dissertations, conference papers, opinion pieces
+
+---
+
+## 📊 Selection Criteria
+
+**✅ Included if:**
+- Peer-reviewed in academic journal
+- Reports effect sizes (r, d, β, R²)
+- Organizational context (not lab studies)
+- Minimum n=100 sample size
+
+**❌ Excluded if:**
+- No effect sizes reported
+- Student/non-workplace samples
+- Qualitative only
+
+---
+
+## 📋 Search Results Summary
+
+**Search Date:** November 21, 2025  
+**Initial hits:** 1,247 articles → **After filters:** 83 with effect sizes → **Full-text review:** 12 articles → **Final selection:** 3 high-quality studies
+
+**Why only 3 studies?**
+- ✅ Meta-analysis (Study #1) already summarizes 169 studies
+- ✅ Complete pathway coverage: M→Y, X→M→Y, X→M
+- ✅ Quality over quantity approach
+- ✅ Converging evidence from multiple designs
+
+---
+
+---
+
+# 🎯 THREE STUDIES SELECTED
+
+---
+
+## **STUDY #1: Meta-Analysis of Role Clarity & Performance**
+
+**Full Citation:**  
+Tubre, T. C., & Collins, J. M. (2000). Jackson and Schuler (1985) revisited: A meta-analysis of the relationships between role ambiguity, role conflict, and job performance. *Journal of Management, 26*(1), 155-169. https://doi.org/10.1177/014920630002600104
+
+**Study Type:** Systematic review / meta-analysis  
+**Sample:** 169 studies, 35,265 employees across industries  
+**Journal Quality:** *Journal of Management* (Impact Factor: 11.2, Top-tier)  
+**Citations:** 1,400+ (highly influential)
+
+### 📊 **CAT MANAGER CRITICAL APPRAISAL:**
+
+| **Criterion** | **Rating** |
+|---------------|-----------|
+| **Design Quality** | **Level A - Highly Appropriate** for causal inference |
+| **Effect Size** | Medium (ρ = .30) |
+| **Precision** | Good (narrow confidence intervals) |
+| **Weaknesses** | ⚠️ Likely missed some studies (publication bias) |
+| **TRUSTWORTHINESS** | **HIGH (90%)** |
+
+**Interpretation:** 10% chance alternative explanations exist. Meta-analysis provides strongest aggregate evidence.
+
+### 🔑 **Key Finding:**
+**ρ = -.30** (role ambiguity → lower performance)  
+**= r = +.30** (role clarity → higher performance)
+
+**What this means:** Clear role expectations explain 9% of performance variance. For every 1-point increase in role clarity, performance improves by 0.30 standard deviations.
+
+### ✅ **Why Selected:**
+- Highest level of evidence (aggregates 169 studies)
+- Directly tests **M→Y pathway** (role clarity → productivity)
+- Corrects for measurement error (ρ statistic)
+- Cross-industry generalizability
+
+---
+
+## **STUDY #2: Leadership Communication Survey**
+
+**Full Citation:**  
+Men, L. R. (2014). Why leadership matters to internal communication: Linking transformational leadership, symmetrical communication, and employee outcomes. *Public Relations Review, 40*(4), 575-584. https://doi.org/10.1016/j.pubrev.2014.06.012
+
+**Study Type:** Cross-sectional survey with structural equation modeling  
+**Sample:** 326 employees across multiple US organizations  
+**Journal Quality:** *Public Relations Review* (Peer-reviewed)
+
+### 📊 **CAT MANAGER CRITICAL APPRAISAL:**
+
+| **Criterion** | **Rating** |
+|---------------|-----------|
+| **Design Quality** | **Level D - Not Appropriate** for causal claims |
+| **Effect Size** | Medium (β = .38 - .41) |
+| **Precision** | Good (adequate sample for SEM) |
+| **Weaknesses** | ⚠️ Non-random sampling, cross-sectional design |
+| **TRUSTWORTHINESS** | **LOW (60%)** |
+
+**Interpretation:** 40% chance alternative explanations exist. Good for relationships, weak for causation.
+
+### 🔑 **Key Findings:**
+- **β = .41** (leadership communication → employee-organization relationships)
+- **β = .38** (symmetrical communication → organizational commitment)
+- **R² = .32** (communication explains 32% outcome variance)
+
+**What this means:** Two-way communication between leaders and employees predicts employee commitment and relationship quality at medium-to-large levels.
+
+### ✅ **Why Selected:**
+- Tests **full X→M→Y model** in one study
+- Direct measurement of communication transparency
+- Multiple organizations sampled
+- Despite design limitations, shows consistent pattern with other studies
+
+---
+
+## **STUDY #3: Merger Communication Field Experiment**
+
+**Full Citation:**  
+Schweiger, D. M., & DeNisi, A. S. (1991). Communication with employees following a merger: A longitudinal field experiment. *Academy of Management Journal, 34*(1), 110-135. https://doi.org/10.5465/256304
+
+**Study Type:** Non-randomized controlled field experiment (quasi-experimental)  
+**Sample:** ~200 employees in two manufacturing plants during merger  
+**Journal Quality:** *Academy of Management Journal* (Top-tier, Impact Factor: 9.5)  
+**Citations:** 2,900+ (foundational/classic study)
+
+### 📊 **CAT MANAGER CRITICAL APPRAISAL:**
+
+| **Criterion** | **Rating** |
+|---------------|-----------|
+| **Design Quality** | **Level B - Moderately Appropriate** for causal inference |
+| **Effect Size** | Medium (d = 0.47) |
+| **Precision** | Too wide (moderate confidence intervals) |
+| **Weaknesses** | ✅ No serious weaknesses identified |
+| **TRUSTWORTHINESS** | **MODERATE (80%)** |
+
+**Interpretation:** 20% chance alternative explanations exist. Strong causal design with control group.
+
+### 🔑 **Key Findings:**
+- **d = 0.47** (communication intervention → reduced role ambiguity)
+- **d = 0.39** (communication intervention → improved job satisfaction)
+- **Effects sustained at 5-month follow-up**
+
+**What this means:** Enhanced communication during organizational change reduced employee confusion about roles by nearly half a standard deviation compared to standard communication. Effect lasted over time.
+
+### ✅ **Why Selected:**
+- **Strongest causal design** (intervention vs. control)
+- **Organizational change context** (directly relevant to our problem)
+- Longitudinal tracking (4 time points over 5 months)
+- Tests **X→M pathway** (communication → role clarity)
+
+---
+
+
+## 🤖 AI Assistance Used
+
+### Search Term Generation:
+**Prompt to Claude:** "What are the academic terms for 'role clarity' used in organizational psychology research?"
+
+**AI Response:** Role ambiguity (inverse), task clarity, job clarity, role understanding, role expectations clarity, goal clarity
+
+**Impact:** Expanded search to include "role ambiguity" = found meta-analysis (#1)
+
+---
+
+### Study Quality Assessment:
+**Prompt to Claude:** "Is *Journal of Management* a reputable peer-reviewed journal? What's its impact factor?"
+
+**AI Response:** Yes, top-tier management journal. Impact factor 11.2. Ranked in top 10 management journals by citation metrics.
+
+**Impact:** Confirmed study #1 credibility before including
+
+---
+
+## 📈 Evidence Coverage Map
+
+| **Pathway Tested** | **Study** | **Effect Size** | **Design** | **Trustworthiness** |
+|-------------------|-----------|----------------|-----------|---------------------|
+| **M→Y** (Clarity → Performance) | Tubre & Collins (2000) | ρ = .30 | Meta-analysis | HIGH (90%) |
+| **X→M→Y** (Full model) | Men (2014) | β = .38-.41 | Survey | LOW (60%) |
+| **X→M** (Communication → Clarity) | Schweiger & DeNisi (1991) | d = 0.47 | Field experiment | MODERATE (80%) |
+
+**✅ ALL THREE PATHWAYS SUPPORTED with medium effect sizes!**
+
+---
+
+## 💪 Strengths of This Search
+
+✅ **Triangulation:** Meta-analysis + field experiment + survey = converging evidence  
+✅ **Multiple databases:** Google Scholar, PsycINFO, EBSCO cross-validation  
+✅ **Effect size focus:** Not just "significant" but "how much impact?"  
+✅ **Systematic approach:** Boolean logic, transparent filters, documented process  
+✅ **Quality verification:** Top-tier journals, peer-reviewed, highly cited
+
+---
+
+## ⚠️ Acknowledged Limitations
+
+1. **Publication bias:** Published studies likely show stronger effects than unpublished
+2. **WEIRD samples:** Mostly Western, Educated, Industrialized, Rich, Democratic contexts
+3. **Self-report bias:** Many studies use employee surveys (perceptions vs. objective data)
+4. **Industry gaps:** Limited manufacturing/tech; more service/knowledge work
+5. **Time period:** Oldest study (1991) predates digital communication tools
+
+---
+
+## 🎯 Bottom Line
+
+**High-quality scientific evidence supports all three pathways:**
+- Communication → Role Clarity ✅ (d = 0.47, experimental evidence)
+- Role Clarity → Performance ✅ (ρ = .30, meta-analytic evidence)
+- Full X→M→Y Model ✅ (β = .38-.41, correlational evidence)
+
+**Confidence Level:** Moderate to High  
+**Actionable:** Yes - effects are consistent, meaningful, and converge across different research designs
+
+**Next Steps:** See `evidence-scientific-sources.txt` for detailed effect size interpretations and `evidence-scientific-appraisal.txt` for full CAT Manager analysis.
+
+---
+
+**Search completed:** November 21, 2025  
+**Total time:** ~2 hours (database search + full-text review + AI consultation)  
+**Most valuable resource:** Meta-analysis synthesizing 35,000+ employees

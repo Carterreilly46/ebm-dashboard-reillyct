@@ -1,0 +1,236 @@
+# Organizational Evidence: Internal Data Collection Strategy
+# Document your approach to gathering internal organizational evidence
+
+## Research Logic Model
+
+**X → M → Y Framework:**
+```
+Executive Communication Frequency (X)
+           ↓
+Employee Role Clarity (M)
+           ↓
+Productivity Maintenance (Y)
+```
+
+**Operational Definitions:**
+- **X (Independent Variable):** Frequency of executive communications during organizational changes (measured through employee perceptions of "how informed" they feel and communication satisfaction ratings)
+- **M (Mediator Variable):** Employee role clarity (measured through agreement with "I know what is expected of me" and "I understand how my work contributes to organizational goals")
+- **Y (Dependent Variable):** Productivity maintenance during transitions (measured through output per hour indices and employee-reported workload management)
+
+## Internal Evidence Goals
+
+### Primary Research Objective
+Collect quantitative organizational data to test the hypothesized pathway that executive communication frequency during organizational changes influences employee role clarity, which in turn affects the organization's ability to maintain productivity levels during transitions. This evidence will establish whether the proposed X→M→Y relationship exists in real organizational settings and estimate the magnitude of these relationships.
+
+### Secondary Feasibility Objective
+Gather contextual data on current communication practices, available communication infrastructure, and resource constraints within organizations undergoing change. This information will inform whether proposed communication interventions are practically implementable given real-world organizational constraints.
+
+## Professional Data Repository Selection
+
+### Selected Primary Data Source
+
+**Federal Employee Viewpoint Survey (FEVS)**
+
+**Repository:** U.S. Office of Personnel Management (OPM)  
+**Access URL:** https://www.opm.gov/fevs/reports/data-reports/  
+**Data Type:** Large-scale employee survey (600,000+ annual respondents)  
+**Cost:** Publicly available at no cost  
+**Update Frequency:** Annual (conducted April-June, results released October-November)  
+**Historical Coverage:** 2002-present, with consistent core questions since 2010
+
+**Justification for Selection:**
+FEVS was selected as the primary organizational data source because it uniquely provides direct measurement of all three variables in our logic model within a single dataset. Unlike most organizational datasets that measure only outcomes (productivity, turnover), FEVS captures employees' experiences with communication and their perceived role clarity—the precise constructs our research question targets. The survey's administration by an independent federal agency (OPM) rather than individual organizations reduces concerns about data manipulation. The large sample size and long time series enable robust statistical analysis and examination of organizational changes over time.
+
+**Supplementary Data Sources:**
+- **BLS Major Sector Productivity and Costs:** Objective productivity metrics (https://www.bls.gov/lpc/)
+- **BLS Job Openings and Labor Turnover Survey (JOLTS):** Turnover outcomes (https://www.bls.gov/jlt/)
+- **GAO Reports:** Organizational change documentation (https://www.gao.gov/)
+
+## Available Data Sources
+
+### Performance Metrics/KPIs
+
+**Communication Satisfaction & Frequency (X Variable)**
+- FEVS Survey Items 53, 58, 61, 64 measuring management communication and information sharing
+- Response Scale: 1-5 Likert scale with 400,000-700,000 annual responses
+- Government-wide baseline: 58% satisfaction; range across agencies: 35-80%
+
+**Role Clarity (M Variable)**
+- FEVS Items 4, 6, 11, 13 measuring job expectations and organizational goal understanding
+- High internal consistency (Cronbach's alpha .75-.85)
+- Government-wide baseline: 78% agreement; historical peak: 82% (2019)
+
+**Productivity Proxies (Y Variable)**
+- BLS Federal Government Output Per Hour (Series PRS88003092): Currently 98.2 (2012=100)
+- FEVS Employee Engagement Index: 65% positive (down from 69% in 2019)
+- JOLTS Voluntary Turnover: 7-9% baseline, spikes to 10-14% during organizational changes
+
+### Internal Systems
+- **HR Information Systems:** FEVS database with 20+ years of longitudinal employee survey data
+- **Communication Platforms:** Federal agency email systems, intranet portals, town hall infrastructure
+- **Performance Management Systems:** BLS productivity tracking, OPM performance data
+
+### Reports and Documentation
+- **Survey Results:** Annual FEVS reports with agency-level breakdowns and trend analysis (2010-2024)
+- **Audit Results:** GAO organizational change audits documenting communication effectiveness
+- **Assessment Reports:** Partnership for Public Service Best Places to Work rankings
+- **Historical Studies:** Academic research using FEVS data, OPM guidance documents
+
+## Data Collection Plan
+
+### Quantitative Data Collection
+#### Metrics to Collect
+
+**Problem-Related Metrics:**
+- **Metric 1:** Communication Satisfaction - Current value: 58% positive - Data source: FEVS Item 64
+- **Metric 2:** Role Clarity Score - Current value: 78% positive - Data source: FEVS Items 4 & 6  
+- **Metric 3:** Voluntary Turnover Rate - Current value: 7-9% annually - Data source: BLS JOLTS
+
+**Solution-Related Metrics:**
+- **Metric 1:** Executive Communication Frequency - Baseline: 1.2 messages/month - Data source: Communication audit
+- **Metric 2:** Town Hall Attendance - Baseline: 35% of employees - Data source: HR event tracking
+- **Metric 3:** Communication Channel Diversity - Baseline: 2.3 channels used - Data source: Platform analytics
+
+#### Time Period Analysis
+- **Historical Data Range:** 2010-2024 (FEVS has consistent questions since 2010)
+- **Trend Analysis Period:** 5 years (2019-2024) to capture recent patterns while controlling for COVID disruption
+- **Seasonal Considerations:** FEVS conducted April-June annually; organizational changes often announced in fall/spring budget cycles
+- **Baseline Period:** 2019 (pre-COVID, stable operations) serves as "normal" comparison point
+
+### Qualitative Data Collection
+#### Internal Documents Review
+- **Communication Policy Documents:** Federal agency communication policies and standard operating procedures
+- **Change Management Plans:** Official change management documentation for identified organizational transitions
+- **Post-Change Evaluation Reports:** Agency after-action reviews, GAO audits, Inspector General reports
+- **Executive Communication Logs:** Agency news archives, Congressional hearing transcripts, public communications
+
+#### Observational Data
+- **Communication Pattern Analysis:** Timeline of major communication events for case study agencies
+- **Meeting Dynamics:** Town hall schedules, all-hands meeting frequency during change vs. stable periods
+- **Workflow Analysis:** How communication flows during organizational changes (formal vs. informal channels)
+- **Cultural Observations:** Qualitative data from FEVS comment analysis, employee focus groups documented in GAO reports
+
+## Access and Permissions
+
+### Data Access Strategy
+#### Required Permissions
+- **FEVS Data:** Publicly available, no permissions needed - download from https://www.opm.gov/fevs/
+- **BLS Data:** Publicly available, no permissions needed - download from https://www.bls.gov/
+- **GAO Reports:** Public documents, no restrictions - access at https://www.gao.gov/
+- **Microdata Access:** Special approval required from OPM for individual-level FEVS data (if needed)
+
+#### Contact Plan
+1. **Primary Contact:** OPM FEVS Help Desk (FEVShelpdesk@opm.gov)
+   - **Data Sources:** FEVS microdata files, documentation, methodology reports
+   - **Approach:** Email request for data dictionary and analysis guidelines
+
+2. **Secondary Contact:** BLS Data Assistance (blsdata_staff@bls.gov)
+   - **Data Sources:** Productivity data, JOLTS data
+   - **Approach:** Email request for industry-specific productivity series codes
+
+### Ethical Considerations
+- **Employee Privacy:** Use only aggregate FEVS data (no individual responses)
+- **Data Security:** Store datasets on password-protected devices, no cloud storage of sensitive files
+- **Use Limitations:** Use data only for research purposes, not for individual evaluation
+- **Reporting Boundaries:** Report only aggregate findings, never identify specific agencies or individuals without permission
+
+## Data Analysis Plan
+
+### Baseline Establishment
+#### Pre-Problem Baselines
+2019 FEVS scores serve as pre-COVID baseline:
+- Communication satisfaction: 65% positive
+- Role clarity: 82% agreement
+- Engagement: 69% positive
+- Productivity index: 100 (set as baseline year)
+
+#### Normal Operating Ranges
+- Communication satisfaction: typically 55-70% positive across agencies
+- Role clarity: typically 75-85% agreement
+- Productivity: ±3% year-over-year variation considered normal
+- Engagement: 60-75% positive range
+
+#### Benchmark Comparisons
+- Compare federal agency scores to government-wide averages
+- Compare agencies undergoing change vs. stable agencies
+- Compare to private sector benchmarks where available (typically 5-10 points higher)
+
+### Problem Evidence Analysis
+#### Problem Indicators
+- Communication satisfaction drops >10 percentage points below baseline
+- Role clarity falls below 70% agreement
+- Engagement declines >5 percentage points
+- Voluntary turnover increases >3 percentage points
+- Productivity declines >5%
+
+#### Problem Severity Measurement
+- **Mild:** 5-10 point decline in any single metric
+- **Moderate:** 10-20 point decline or multiple metrics affected
+- **Severe:** >20 point decline or all metrics declining simultaneously
+
+#### Root Cause Investigation
+- Temporal analysis: Does communication decline precede role clarity and productivity declines?
+- Cross-agency comparison: Do agencies with better communication have better outcomes?
+- Mediation analysis: Does role clarity mediate the communication-productivity relationship?
+- Control for confounds: Budget changes, leadership transitions, economic conditions
+
+### Solution Feasibility Analysis
+#### Resource Assessment
+Federal agencies have existing communication infrastructure requiring minimal additional financial investment. Primary constraint is executive time allocation (2-5 hours per week for enhanced communication).
+
+#### Capability Assessment
+Agencies have communication staff and technology. Need to build executive communication skills and middle manager cascade capabilities. Training investment estimated at 10-20 hours per executive.
+
+#### Risk Assessment
+Low implementation risk - uses existing systems and processes. Main risk is sustainability (communication frequency reverting to baseline after initial urgency passes). Requires accountability mechanisms to maintain frequency.
+
+## Documentation Strategy
+
+### Data Collection Log
+Track all data downloads with date, source, file version, and variables included. Document any quality issues or anomalies observed during collection.
+
+### Analysis Documentation
+Maintain commented analysis code explaining each analytical decision. Document handling of missing data, outliers, and methodological choices. Keep written memos explaining unexpected findings.
+
+### Quality Assurance
+Cross-check downloaded data against published OPM/BLS reports to verify accuracy. Have second reviewer check analysis for errors. Document all data cleaning decisions.
+
+### Version Control
+Use date-stamped file names (FEVS_Analysis_2024-11-20.csv). Keep original raw data separate from processed versions. Maintain changelog of all modifications.
+
+## Expected Challenges
+
+### Data Availability
+- FEVS measures perceptions, not objective communication frequency
+- Productivity data aggregated to sector level, cannot link to specific agencies
+- Communication logs don't exist in standardized form
+
+### Data Quality Issues
+- 40-45% FEVS response rate creates non-response bias
+- Self-reported data subject to perception bias
+- Organizational change timing unclear (when exactly did transitions start/end?)
+
+### Access Barriers
+- FEVS microdata requires special approval (if individual-level analysis desired)
+- Internal agency communication data would require insider access
+
+### Time Constraints
+- FEVS annual cycle means limited data points for time-series analysis
+- Historical communication logs may not exist before 2015
+
+## Backup Plans
+
+### Alternative Data Sources
+- If FEVS unavailable: Use published GAO case studies of organizational changes
+- If productivity data unavailable: Use FEVS engagement index as proxy for organizational performance
+- If communication logs unavailable: Use employee perception questions as proxy for frequency
+
+### Proxy Measures
+- Instead of exact communication frequency: Use "kept informed" perception from FEVS
+- Instead of individual productivity: Use agency-level productivity trends
+- Instead of direct role clarity: Use turnover as inverse indicator
+
+### Simplified Analysis
+- Minimum viable evidence: Compare high vs. low communication agencies using public FEVS data
+- Focus on correlational rather than causal analysis
+- Use case study approach (2-3 agencies) rather than large quantitative study
